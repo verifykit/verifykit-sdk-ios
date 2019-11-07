@@ -4,6 +4,7 @@
 [![Swift support](https://img.shields.io/badge/Swift-4.0%20%7C%204.1%20%7C%204.2%20%7C%205.0%20%7C%205.1-lightgrey.svg?colorA=28a745&colorB=4E4E4E)](#swift-versions-support)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VerifyKit.svg?style=flat&label=CocoaPods&colorA=28a745&&colorB=4E4E4E)](https://cocoapods.org/pods/VerifyKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-uncompatible-red.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Status](https://img.shields.io/badge/Status-beta-yellowgreen)
 
 VerifyKit is the next gen phone number validation system. Users can easily verify their  phone numbers without the need of entering phone number or a pin code.
 
