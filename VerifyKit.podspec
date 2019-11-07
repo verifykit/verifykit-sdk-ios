@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
     s.summary      = "VerifyKit: Phone number validation SDK, without the needs of user input."
     s.description  = "VerifyKit is the next gen phone number validation system. Users can easily verify their  phone numbers without the need of entering phone number or a pin code."
     s.homepage     = "http://verifykit.com"
-    s.license = { :type => "MIT", :file => "LICENSE" }
+    s.license = { :type => "MIT" }
     s.author             = { "VerifyKit" => "sdk@verifykit.com" }
     s.source       = { :git => "https://github.com/verifykit/verifykit-sdk-ios.git", :branch => "master", :tag => "#{s.version}" }
     s.homepage     = "https://verifykit.com"
