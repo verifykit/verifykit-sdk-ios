@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                    Permission is granted to...
                   LICENSE
                 }
-    s.author             = { "VerifyKit" => "contact@verifykit.com" }
+    s.author             = { "VerifyKit" => "sdk@verifykit.com" }
     s.source       = { :git => "https://github.com/verifykit/verifykit-sdk-ios.git", :branch => "master", :tag => "#{s.version}" }
     s.vendored_frameworks = "VerifyKit.framework"
     s.dependency "CryptoSwift"
