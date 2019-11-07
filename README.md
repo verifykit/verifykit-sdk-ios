@@ -5,7 +5,7 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VerifyKit.svg?style=flat&label=CocoaPods&colorA=28a745&&colorB=4E4E4E)](https://cocoapods.org/pods/VerifyKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-uncompatible-red.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-VerifyKit is a framework to easily integrate phone number validation flow to your mobile application.
+VerifyKit is the next gen phone number validation system. Users can easily verify their  phone numbers without the need of entering phone number or a pin code.
 
 ## Requirements
 
@@ -95,7 +95,7 @@ let kit = VerifyKit(options: options)
 ```
 
 
-## VerifyKitOptions Struct
+### VerifyKitOptions Struct
 
 You can change the settings declared in ```VerifyKitOptions``` struct.
 
@@ -117,16 +117,44 @@ public enum VerifyKitEnvironment {
 
 public struct VerifyKitTheme {
     public var appName: String = "VerifyKit" // default
-    public var statusBarColor: UIStatusBarStyle = .lightContent // default
-    public var navigationBarBackgroundColor: UIColor = .blue // default
-    public var navigationBarForegroundColor: UIColor = .white // default
+    public var statusBarColor: UIStatusBarStyle = .default // default
+    public var navigationBarBackgroundColor: UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0) // default
+    public var navigationBarForegroundColor: UIColor = .black // default
 }
 ```
 
+## Author
+
+VerifyKit is owned and maintained by [VerifyKit DevTeam](mailto://sdk@verifykit.com).
+
 ## Dependencies
 
-VerifyKit uses CryptoSwift for network traffic encryption.
+This product includes software([CyrptoSwift](https://cocoapods.org/pods/CryptoSwift)) developed by the ["Marcin Krzyzanowski"](http://krzyzanowskim.com).
 
 ## Notes
 
 Before your app release, please change the VerifyKitEnvironment to 'release' instead of 'debug'.
+
+## LICENSE
+
+The MIT License
+
+Copyright (c) 2019-2020 VerifyKit. [http://verifykit.com](http://verifykit.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
