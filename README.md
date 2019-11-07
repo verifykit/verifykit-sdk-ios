@@ -116,16 +116,12 @@ public enum VerifyKitEnvironment {
 }
 
 public struct VerifyKitTheme {
-    public var appName: String = "VerifyKit" // default
-    public var statusBarColor: UIStatusBarStyle = .default // default
-    public var navigationBarBackgroundColor: UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0) // default
-    public var navigationBarForegroundColor: UIColor = .black // default
+    public var appName: String = "VerifyKit"  // default
+    public var statusBarColor: UIStatusBarStyle = .default  // default
+    public var navigationBarBackgroundColor: UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0)  // default
+    public var navigationBarForegroundColor: UIColor = .black  // default
 }
 ```
-
-## Author
-
-VerifyKit is owned and maintained by [VerifyKit DevTeam](mailto://sdk@verifykit.com).
 
 ## Dependencies
 
@@ -135,7 +131,14 @@ This product includes software([CyrptoSwift](https://cocoapods.org/pods/CryptoSw
 
 Before your app release, please change the VerifyKitEnvironment to 'release' instead of 'debug'.
 
-## LICENSE
+---
+
+## Author
+
+VerifyKit is owned and maintained by [VerifyKit DevTeam](mailto:sdk@verifykit.com).
+
+
+## License
 
 The MIT License
 
