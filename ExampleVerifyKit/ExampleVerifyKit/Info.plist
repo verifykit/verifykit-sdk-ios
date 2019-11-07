@@ -60,5 +60,24 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>vfk{your-verifykit-id}</string>
+			</array>
+		</dict>
+	</array>
+	<key>VerifyKitKey</key>
+	<string>{your-verifykit-key}</string>
+	<key>VerifyKitSecret</key>
+	<string>{your-verifykit-secret-key}</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>whatsapp</string>
+		<string>tg</string>
+		<string>viber</string>
+	</array>
 </dict>
 </plist>
