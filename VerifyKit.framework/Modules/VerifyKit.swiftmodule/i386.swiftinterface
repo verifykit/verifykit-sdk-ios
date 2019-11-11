@@ -27,7 +27,8 @@ public struct VerifyKitTheme {
   public var statusBarColor: UIKit.UIStatusBarStyle
   public var navigationBarBackgroundColor: UIKit.UIColor
   public var navigationBarForegroundColor: UIKit.UIColor
-  public init(appName: Swift.String = "VerifyKit", statusBarColor: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0), navigationBarForegroundColor: UIKit.UIColor = .black)
+  public var backgroundColor: UIKit.UIColor
+  public init(appName: Swift.String = "VerifyKit", statusBarColor: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0), navigationBarForegroundColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor = .white)
 }
 public struct VerifyKitOptions {
   public init(environment: VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, theme: VerifyKitTheme = VerifyKitTheme())
@@ -120,7 +121,13 @@ extension Reachability {
     get
   }
 }
-final public class VerifyKit {
+public protocol CheckSessionProtocol : AnyObject {
+  static func checkInterruptedSession(completion: @escaping (Swift.String?) -> Swift.Void)
+}
+extension CheckSessionProtocol {
+  public static func checkInterruptedSession(completion: @escaping (Swift.String?) -> Swift.Void)
+}
+final public class VerifyKit : CheckSessionProtocol {
   public init()
   public init(options: VerifyKitOptions)
   final public func viewControllerForLogin() -> VerifyKitViewController
