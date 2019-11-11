@@ -35,7 +35,7 @@ To successfully use the framework, you need to add ```VerifyKitKey``` and ```Ver
 After user chooses to validate the phone number with a third party messaging app, the SDK needs to return to main app.
 To successfully complete this flow, you need to add ```vfk{your-verifykit-id}``` as URL Scheme to your plist file.
 
-Open your Info.plist as source code and insert the following XML snippet into the body of your file just before the final </dict> element.
+Open your Info.plist as source code and insert the following XML snippet into the body of your file just before the final ```</dict>``` element.
 
 ```
 <key>CFBundleURLTypes</key>
@@ -88,6 +88,30 @@ extension ViewController: VerifyKitDelegate {
 }
 ```
 
+##
+
+
+There may be a case when user chooses a third party messaging app for validation, sends a message, but doesn't return to main app and kills it. In that case, that user is verified with VerifyKit but the main app doesn't know it yet.
+
+To fix this, we have a method to check interrupted session status.
+
+```swift
+VerifyKit.checkInterruptedSession { [weak self] sessionCode in
+  guard let sessionCode = sessionCode else {
+    // Start VerifyKit flow or do what your app needs
+    return
+  }
+
+  // You have an interrupted sessionCode from last time.
+  // Tell your API.
+  print("sessionCode \(sessionCode)")
+}
+```
+
+Using this method is optional and up to you.
+
+**VerifyKit will handle the interrupted verification even if you don't implement this method.**
+
 ## Configuration
 
 ```swift
@@ -121,12 +145,13 @@ public struct VerifyKitTheme {
     public var statusBarColor: UIStatusBarStyle = .default  // default
     public var navigationBarBackgroundColor: UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0)  // default
     public var navigationBarForegroundColor: UIColor = .black  // default
+    public var backgroundColor: UIColor = .white  // default
 }
 ```
 
 ## Dependencies
 
-This product includes software([CyrptoSwift](https://cocoapods.org/pods/CryptoSwift)) developed by the ["Marcin Krzyzanowski"](http://krzyzanowskim.com).
+This product includes software([CyrptoSwift](https://cocoapods.org/pods/CryptoSwift)) developed by [Marcin Krzyzanowski](http://krzyzanowskim.com).
 
 ## Notes
 
