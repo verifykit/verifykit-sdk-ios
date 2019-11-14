@@ -88,6 +88,9 @@ extension ViewController: VerifyKitDelegate {
 }
 ```
 
+VerifyKit only dismisses ```viewControllerForLogin()``` automatically when ```didSuccess``` delegate is called.
+To give the user a chance to try other validation methods or to start again, ```viewControllerForLogin()``` doesn't get dismissed on ```didFail```. If you want to dismiss it on some specific error type, you can do that manually.
+
 ##
 
 
@@ -142,10 +145,11 @@ public enum VerifyKitEnvironment {
 
 public struct VerifyKitTheme {
     public var appName: String = "VerifyKit"  // default
-    public var statusBarColor: UIStatusBarStyle = .default  // default
+    public var statusBarStyle: UIStatusBarStyle = .default  // default
     public var navigationBarBackgroundColor: UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0)  // default
     public var navigationBarForegroundColor: UIColor = .black  // default
     public var backgroundColor: UIColor = .white  // default
+    public var textColor: UIColor = .darkText // default
 }
 ```
 
