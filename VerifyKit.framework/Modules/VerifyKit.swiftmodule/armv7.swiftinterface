@@ -24,11 +24,12 @@ public enum VerifyKitEnvironment {
 }
 public struct VerifyKitTheme {
   public var appName: Swift.String
-  public var statusBarColor: UIKit.UIStatusBarStyle
+  public var statusBarStyle: UIKit.UIStatusBarStyle
   public var navigationBarBackgroundColor: UIKit.UIColor
   public var navigationBarForegroundColor: UIKit.UIColor
   public var backgroundColor: UIKit.UIColor
-  public init(appName: Swift.String = "VerifyKit", statusBarColor: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0), navigationBarForegroundColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor = .white)
+  public var textColor: UIKit.UIColor
+  public init(appName: Swift.String = "VerifyKit", statusBarStyle: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor = UIColor(red: 0.964, green: 0.964, blue: 0.968, alpha: 1.0), navigationBarForegroundColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor = .white, textColor: UIKit.UIColor = .darkText)
 }
 public struct VerifyKitOptions {
   public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, theme: VerifyKit.VerifyKitTheme = VerifyKitTheme())
