@@ -21,12 +21,11 @@ You can install framework via [CocoaPods](https://cocoapods.org/pods/VerifyKit).
 ```bash
 pod 'VerifyKit'
 ```
-
-## Manual Installation
+<!--- ## Manual Installation
 
 Or you can [click here](https://verifykit.com/framework/verifykit-sdk-ios-001.zip) to download the framework and add the files with drag and drop.
 
-If you choose to use the SDK manually, after you added the files to your project, you need to add both frameworks to ```Frameworks, Libraries, and Embedded Content``` panel in your Project's general settings, then set ```Embed``` option as ```Embed & Sign```.
+If you choose to use the SDK manually, after you added the files to your project, you need to add both frameworks to ```Frameworks, Libraries, and Embedded Content``` panel in your Project's general settings, then set ```Embed``` option as ```Embed & Sign```. -->
 
 ## Configure Info.plist
 
