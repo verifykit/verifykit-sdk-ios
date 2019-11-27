@@ -4,6 +4,7 @@
 import CoreTelephony
 import CryptoSwift
 import Foundation
+import SafariServices
 import Swift
 import SystemConfiguration
 import UIKit
