@@ -15,9 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    @IBAction private func startKit() {
         let verifyKit = VerifyKit(options: getVerifyKitOptions())
         let viewController = verifyKit.viewControllerForLogin()
         viewController.kitDelegate = self

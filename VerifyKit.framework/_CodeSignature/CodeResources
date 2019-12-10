@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		RhvlXUczuynstpqfHXz4mVC9ynA=
+		5WchipZJH0XzN8S+Oyc29pLTsWo=
 		</data>
 		<key>Headers/VerifyKit-Swift.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2ZtBCjs2Isa3KlZAFRjC78rHMSk=
+		zVAGCmlOEp/hS8ho1b4x2m4tpuQ=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		YStMoUzhWW5YQFgnHAuI71NrWmE=
+		pd7z07XRyRe/CJjjFP8M7vwfQxs=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		blznLsDyA7/bWyKOiCMy0JpUqa8=
+		0GqHuvn04YUMtm6r0luqMqmNL/A=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		blznLsDyA7/bWyKOiCMy0JpUqa8=
+		0GqHuvn04YUMtm6r0luqMqmNL/A=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		YStMoUzhWW5YQFgnHAuI71NrWmE=
+		pd7z07XRyRe/CJjjFP8M7vwfQxs=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		YStMoUzhWW5YQFgnHAuI71NrWmE=
+		pd7z07XRyRe/CJjjFP8M7vwfQxs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -91,11 +91,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RhvlXUczuynstpqfHXz4mVC9ynA=
+			5WchipZJH0XzN8S+Oyc29pLTsWo=
 			</data>
 			<key>hash2</key>
 			<data>
-			GLCT9DttMF78JbiDINL4XFwpElhLgwkmd1wM24jGF9A=
+			UfmUK8A3DyC/zsLu5omwGH6Jr//Tu5Joa/7sBvZIcac=
 			</data>
 		</dict>
 		<key>Headers/VerifyKit-Swift.h</key>
@@ -146,11 +146,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YStMoUzhWW5YQFgnHAuI71NrWmE=
+			pd7z07XRyRe/CJjjFP8M7vwfQxs=
 			</data>
 			<key>hash2</key>
 			<data>
-			oxSOrP8SwXV0LLCwt1pxSJcmumhIIQU2Jq6Ez20eAwI=
+			XEG8dRBnlOsw1e95L3TWH8RI7E9S/0wsBWVlqsLL/gM=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -179,11 +179,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			blznLsDyA7/bWyKOiCMy0JpUqa8=
+			0GqHuvn04YUMtm6r0luqMqmNL/A=
 			</data>
 			<key>hash2</key>
 			<data>
-			iB57QVN8zMT0YEh3+1CDHN3ZUSW9jOfKQO4TReNHx0I=
+			Ym0ONTmICPYPktrsrj6ADIfXy30djHTcZt3p14a5UlM=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64.swiftdoc</key>
@@ -212,11 +212,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			blznLsDyA7/bWyKOiCMy0JpUqa8=
+			0GqHuvn04YUMtm6r0luqMqmNL/A=
 			</data>
 			<key>hash2</key>
 			<data>
-			iB57QVN8zMT0YEh3+1CDHN3ZUSW9jOfKQO4TReNHx0I=
+			Ym0ONTmICPYPktrsrj6ADIfXy30djHTcZt3p14a5UlM=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -245,11 +245,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YStMoUzhWW5YQFgnHAuI71NrWmE=
+			pd7z07XRyRe/CJjjFP8M7vwfQxs=
 			</data>
 			<key>hash2</key>
 			<data>
-			oxSOrP8SwXV0LLCwt1pxSJcmumhIIQU2Jq6Ez20eAwI=
+			XEG8dRBnlOsw1e95L3TWH8RI7E9S/0wsBWVlqsLL/gM=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/armv7.swiftdoc</key>
@@ -278,11 +278,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YStMoUzhWW5YQFgnHAuI71NrWmE=
+			pd7z07XRyRe/CJjjFP8M7vwfQxs=
 			</data>
 			<key>hash2</key>
 			<data>
-			oxSOrP8SwXV0LLCwt1pxSJcmumhIIQU2Jq6Ez20eAwI=
+			XEG8dRBnlOsw1e95L3TWH8RI7E9S/0wsBWVlqsLL/gM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
