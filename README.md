@@ -53,7 +53,7 @@ Open your Info.plist as source code and insert the following XML snippet into th
 <key>LSApplicationQueriesSchemes</key>
 <array>
   <string>whatsapp</string>
-  <string>tg</string>
+  <string>telegram</string>
   <string>viber</string>
 </array>
 ```
