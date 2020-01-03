@@ -76,7 +76,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>whatsapp</string>
-		<string>tg</string>
+		<string>telegram</string>
 		<string>viber</string>
 	</array>
 </dict>
