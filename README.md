@@ -167,6 +167,11 @@ Before your app release, please change the VerifyKitEnvironment to 'release' ins
 VerifyKit is owned and maintained by [VerifyKit DevTeam](mailto:sdk@verifykit.com).
 
 
+## Support
+
+If you have any questions or requests, feel free to [create an issue](https://github.com/verifykit/verifykit-sdk-ios/issues).
+
+
 ## License
 
 The MIT License
