@@ -149,6 +149,7 @@ public struct VerifyKitTheme {
     public var navigationBarForegroundColor: UIColor = .black  // default
     public var backgroundColor: UIColor = .white  // default
     public var textColor: UIColor = .darkText // default
+    public var showCloseButton: Bool = true // default
 }
 ```
 

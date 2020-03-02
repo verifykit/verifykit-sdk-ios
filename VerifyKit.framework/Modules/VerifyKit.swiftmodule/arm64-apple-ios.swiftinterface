@@ -31,7 +31,8 @@ public struct VerifyKitTheme {
   public var navigationBarForegroundColor: UIKit.UIColor
   public var backgroundColor: UIKit.UIColor
   public var textColor: UIKit.UIColor
-  public init(appName: Swift.String = "VerifyKit", statusBarStyle: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor = UIColor(red: 0.964, green: 0.964, blue: 0.968, alpha: 1.0), navigationBarForegroundColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor = .white, textColor: UIKit.UIColor = .darkText)
+  public var showCloseButton: Swift.Bool
+  public init(appName: Swift.String = "VerifyKit", statusBarStyle: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor = UIColor(red: 0.964, green: 0.964, blue: 0.968, alpha: 1.0), navigationBarForegroundColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor = .white, textColor: UIKit.UIColor = .darkText, showCloseButton: Swift.Bool = true)
 }
 public struct VerifyKitOptions {
   public init(environment: VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, theme: VerifyKitTheme = VerifyKitTheme())
