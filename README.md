@@ -8,6 +8,21 @@
 
 VerifyKit is the next gen phone number validation system. Users can easily verify their  phone numbers without the need of entering phone number or a pin code.
 
+## How It Works?
+
+1. Register your app at https://www.verifykit.com and get your client keys and server key. 
+2. Add VerifyKit SDK to your app
+3. Configure and start VerifyKit SDK
+4. When verification completed, send "sessionId" which VeriyfKit SDK gives you to your backend service
+5. At your server side, get user's phone number from VerifyKit service wtih "serverKey" and sessionId. You can check [Backend Integration](#backend-integration)
+
+![VerifyKit Flow](images/vk-flow.jpg)
+
+## Security
+
+"ServerKey" are used for getting info from VerifyKit service.
+Please keep "ServerKey" safe. Do not include your client's code base.
+
 ## Requirements
 
  - Xcode 11.0+
@@ -161,16 +176,64 @@ This product includes software([CyrptoSwift](https://cocoapods.org/pods/CryptoSw
 
 Before your app release, please change the VerifyKitEnvironment to 'release' instead of 'debug'.
 
+## Backend Integration
+
+Depending on the language you use in your backend service, you can use one of the following options.
+
+You can use our [php-sdk](https://github.com/verifykit/verifykit-sdk-php/blob/master/README.md) like this; 
+
+```php
+$vfk = new \VerifyKit\VerifyKit($serverKey);
+
+/** @var \VerifyKit\Entity\Response $result */
+$result = $vfk->getResult($sessionId);
+
+if ($result->isSuccess()) {
+    echo "Phone number : " . $result->getPhoneNumber() .
+        ", Validation Type : " . $result->getValidationType() .
+        ", Validation Date : " . $result->getValidationDate()->format('Y-m-d H:i:s') . PHP_EOL;
+} else {
+    echo "Error message : " . $result->getErrorMessage() . ", error code : " . $result->getErrorCode() . PHP_EOL;
+}
+```
+
+You can use our [python-sdk](https://github.com/verifykit/verifykit-sdk-python/blob/master/README.md) like this; 
+
+```python
+
+from VerifyKit import Verify
+
+verify = Verify(server_key="{SERVER-KEY}")
+verify.validation(session_id='{SESSION-ID}')
+
+if verify.is_valid:
+    #Validation success.
+    print(verify.response())
+
+elif verify.is_valid == False:
+    #Validation fail.
+    print(verify.response())
+ 
+```
+
+Or you can use curl request like this;
+
+```bash
+curl --location --request POST 'https://api.verifykit.com/v1.0/result' \
+--header 'X-Vfk-Server-Key:{SERVER-KEY}' \
+--header 'Content-Type: application/json' \
+--form 'sessionId={{SESSION-ID}}’
+```
+
 ---
-
-## Author
-
-VerifyKit is owned and maintained by [VerifyKit DevTeam](mailto:sdk@verifykit.com).
-
 
 ## Support
 
 If you have any questions or requests, feel free to [create an issue](https://github.com/verifykit/verifykit-sdk-ios/issues).
+
+## Author
+
+VerifyKit is owned and maintained by [VerifyKit DevTeam](mailto:sdk@verifykit.com).
 
 
 ## License
