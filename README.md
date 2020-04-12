@@ -13,15 +13,15 @@ VerifyKit is the next gen phone number validation system. Users can easily verif
 1. Register your app at https://www.verifykit.com and get your client keys and server key. 
 2. Add VerifyKit SDK to your app
 3. Configure and start VerifyKit SDK
-4. When verification completed, send "sessionId" which VeriyfKit SDK gives you to your backend service
-5. At your server side, get user's phone number from VerifyKit service wtih "serverKey" and sessionId. You can check [Backend Integration](#backend-integration)
+4. When verification is complete, send ```sessionId``` which VeriyfKit SDK gives you to your backend service
+5. At your server side, get user's phone number from VerifyKit service wtih ```serverKey``` and ```sessionId```. You can check [Backend Integration](#backend-integration)
 
 ![VerifyKit Flow](images/vk-flow.jpg)
 
 ## Security
 
-"ServerKey" are used for getting info from VerifyKit service.
-Please keep "ServerKey" safe. Do not include your client's code base.
+```ServerKey``` is used for getting info from VerifyKit service.
+Please keep ```ServerKey``` safe. Do not include it in your client's code base.
 
 ## Requirements
 
@@ -45,6 +45,8 @@ If you choose to use the SDK manually, after you added the files to your project
 ## Configure Info.plist
 
 To successfully use the framework, you need to add ```VerifyKitKey``` and ```VerifyKitSecret``` to your plist file. This step is mandatory.
+
+To open a third party messaging app from your application, you need to add their url schemes to ```LSApplicationQueriesSchemes``` key in your plist file.
 
 After user chooses to validate the phone number with a third party messaging app, the SDK needs to return to main app.
 To successfully complete this flow, you need to add ```vfk{your-verifykit-id}``` as URL Scheme to your plist file.
@@ -103,7 +105,7 @@ extension ViewController: VerifyKitDelegate {
 ```
 
 VerifyKit only dismisses ```viewControllerForLogin()``` automatically when ```didSuccess``` delegate is called.
-To give the user a chance to try other validation methods or to start again, ```viewControllerForLogin()``` doesn't get dismissed on ```didFail```. If you want to dismiss it on some specific error type, you can do that manually.
+To give user a chance to try other validation methods or to start again, ```viewControllerForLogin()``` doesn't get dismissed on ```didFail```. If you want to dismiss it on some specific error type, you can do that manually.
 
 ##
 
@@ -172,7 +174,7 @@ public struct VerifyKitTheme {
 
 This product includes software([CyrptoSwift](https://cocoapods.org/pods/CryptoSwift)) developed by [Marcin Krzyzanowski](http://krzyzanowskim.com).
 
-## Notes
+## Other Notes
 
 Before your app release, please change the VerifyKitEnvironment to 'release' instead of 'debug'.
 
