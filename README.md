@@ -2,7 +2,7 @@
 [![Platform](https://img.shields.io/badge/Platforms-iOS-4E4E4E.svg?colorA=28a745)](#installation)
 ![Status](https://img.shields.io/badge/Status-Beta-yellowgreen) ![License](https://img.shields.io/badge/License-MIT-red.svg)
 
-[![Swift support](https://img.shields.io/badge/Swift-4.0%20%7C%204.1%20%7C%204.2%20%7C%205.0%20%7C%205.1-lightgrey.svg?colorA=28a745&colorB=4E4E4E)](#swift-versions-support)
+[![Swift support](https://img.shields.io/badge/Swift-4.0%20%7C%204.1%20%7C%204.2%20%7C%205.0%20%7C%205.1%20%7C%205.2-lightgrey.svg?colorA=28a745&colorB=4E4E4E)](#swift-versions-support)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VerifyKit.svg?style=flat&label=CocoaPods&colorA=28a745&&colorB=4E4E4E)](https://cocoapods.org/pods/VerifyKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-uncompatible-red.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -113,6 +113,9 @@ To give user a chance to try other validation methods or to start again, ```view
 There may be a case when user chooses a third party messaging app for validation, sends a message, but doesn't return to main app and kills it. In that case, that user is verified with VerifyKit but the main app doesn't know it yet.
 
 To fix this, we have a method to check interrupted session status.
+Using this method is optional and up to you.
+
+**VerifyKit will handle the interrupted verification even if you don't implement this method.**
 
 ```swift
 VerifyKit.checkInterruptedSession { [weak self] sessionCode in
@@ -126,10 +129,6 @@ VerifyKit.checkInterruptedSession { [weak self] sessionCode in
   print("sessionCode \(sessionCode)")
 }
 ```
-
-Using this method is optional and up to you.
-
-**VerifyKit will handle the interrupted verification even if you don't implement this method.**
 
 ## Configuration
 
@@ -166,6 +165,7 @@ public struct VerifyKitTheme {
     public var navigationBarForegroundColor: UIColor = .black  // default
     public var backgroundColor: UIColor = .white  // default
     public var textColor: UIColor = .darkText // default
+    public var buttonColor: UIColor = UIColor(red: 0, green: 0.835, blue: 0.388, alpha: 1.0) // default
     public var showCloseButton: Bool = true // default
 }
 ```
