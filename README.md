@@ -48,21 +48,9 @@ To successfully use the framework, you need to add ```VerifyKitKey``` and ```Ver
 
 To open a third party messaging app from your application, you need to add their url schemes to ```LSApplicationQueriesSchemes``` key in your plist file.
 
-After user chooses to validate the phone number with a third party messaging app, the SDK needs to return to main app.
-To successfully complete this flow, you need to add ```vfk{your-verifykit-id}``` as URL Scheme to your plist file.
-
 Open your Info.plist as source code and insert the following XML snippet into the body of your file just before the final ```</dict>``` element.
 
 ```
-<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-    <key>CFBundleURLSchemes</key>
-    <array>
-      <string>vfk{your-verifykit-id}</string>
-    </array>
-  </dict>
-</array>
 <key>VerifyKitKey</key>
 <string>{your-verifykit-key}</string>
 <key>VerifyKitSecret</key>
@@ -74,6 +62,15 @@ Open your Info.plist as source code and insert the following XML snippet into th
   <string>viber</string>
 </array>
 ```
+
+##
+
+After a successful validation with a third party messaging app, the user needs to return to main app. If your application has an Associated Domain, we can add a deeplink to our message for easy and quick redirect.
+
+If you support Associated Domains, please fill out "Deeplink" field at VerifyKit portal with your domain.
+
+If you don't support Associated Domains, you can enter a custom link with your application's url scheme to "Deeplink" field, like ```yourapp://welcome```. However, many messaging apps doesn't recognize url schemes as clickable links, so quick redirect may not work in this scenario.
+
 
 ## Usage
 
