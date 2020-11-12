@@ -46,7 +46,7 @@ If you choose to use the SDK manually, after you added the files to your project
 
 To successfully use the framework, you need to add ```VerifyKitKey``` and ```VerifyKitSecret``` to your plist file. This step is mandatory.
 
-To open a third party messaging app from your application, you need to add their url schemes to ```LSApplicationQueriesSchemes``` key in your plist file.
+To open a third party messaging app from your application, you need to add their url schemes to ```LSApplicationQueriesSchemes``` key in your plist file. After iOS14, to open Associated Domain URLS in a device which uses a different default browser then Safari, you also need to add ```https``` as url scheme.
 
 Open your Info.plist as source code and insert the following XML snippet into the body of your file just before the final ```</dict>``` element.
 
@@ -60,6 +60,7 @@ Open your Info.plist as source code and insert the following XML snippet into th
   <string>whatsapp</string>
   <string>telegram</string>
   <string>viber</string>
+  <string>https</string>
 </array>
 ```
 
