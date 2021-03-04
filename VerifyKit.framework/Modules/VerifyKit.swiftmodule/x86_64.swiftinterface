@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
-// swift-module-flags: -target x86_64-apple-ios10.3-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VerifyKit
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VerifyKit
 import CoreTelephony
 import CryptoSwift
 import Foundation
@@ -28,16 +28,13 @@ public enum VerifyKitEnvironment {
 public struct VerifyKitTheme {
   public var appName: Swift.String
   public var statusBarStyle: UIKit.UIStatusBarStyle
-  public var navigationBarBackgroundColor: UIKit.UIColor
-  public var navigationBarForegroundColor: UIKit.UIColor
-  public var backgroundColor: UIKit.UIColor
-  public var textColor: UIKit.UIColor
-  public var buttonColor: UIKit.UIColor
+  public var navigationBarBackgroundColor: UIKit.UIColor?
+  public var navigationBarForegroundColor: UIKit.UIColor?
   public var showCloseButton: Swift.Bool
-  public init(appName: Swift.String = "VerifyKit", statusBarStyle: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor = UIColor(red: 0.964, green: 0.964, blue: 0.968, alpha: 1.0), navigationBarForegroundColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor = .white, textColor: UIKit.UIColor = .darkText, buttonColor: UIKit.UIColor = UIColor(red: 0, green: 0.835, blue: 0.388, alpha: 1.0), showCloseButton: Swift.Bool = true)
+  public init(appName: Swift.String = "VerifyKit", statusBarStyle: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor? = nil, navigationBarForegroundColor: UIKit.UIColor? = nil, showCloseButton: Swift.Bool = true)
 }
 public struct VerifyKitOptions {
-  public init(environment: VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, theme: VerifyKitTheme = VerifyKitTheme())
+  public init(environment: VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, theme: VerifyKitTheme = VerifyKitTheme(), deviceID: Swift.String? = nil)
 }
 public protocol VerifyKitDelegate : UIKit.UIViewController {
   func didSuccess(with sessionCode: Swift.String)

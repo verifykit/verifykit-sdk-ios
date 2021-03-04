@@ -24,8 +24,7 @@ class ViewController: UIViewController {
     
     private func getVerifyKitOptions() -> VerifyKitOptions {
         var theme = VerifyKitTheme()
-        theme.appName = "VerifyKit"
-        theme.statusBarColor = .default
+        theme.appName = "VerifyKit Example"
         let options = VerifyKitOptions(environment: .debug, theme: theme)
         return options
     }

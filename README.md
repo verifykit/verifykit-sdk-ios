@@ -25,8 +25,8 @@ Please keep ```ServerKey``` safe. Do not include it in your client's code base.
 
 ## Requirements
 
- - Xcode 11.0+
- - iOS 10.3+
+ - Xcode 12.0+
+ - iOS 11.0+
 
 ## Installation
 
@@ -161,9 +161,6 @@ public struct VerifyKitTheme {
     public var statusBarStyle: UIStatusBarStyle = .default  // default
     public var navigationBarBackgroundColor: UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0)  // default
     public var navigationBarForegroundColor: UIColor = .black  // default
-    public var backgroundColor: UIColor = .white  // default
-    public var textColor: UIColor = .darkText // default
-    public var buttonColor: UIColor = UIColor(red: 0, green: 0.835, blue: 0.388, alpha: 1.0) // default
     public var showCloseButton: Bool = true // default
 }
 ```
