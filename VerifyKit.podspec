@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "VerifyKit"
-    s.version      = "0.4"
+    s.version      = "0.4.1"
     s.summary      = "VerifyKit: Phone number validation SDK, without the needs of user input."
     s.description  = "VerifyKit is the next gen phone number validation system. Users can easily verify their  phone numbers without the need of entering phone number or a pin code."
     s.homepage     = "http://verifykit.com"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = "VerifyKit.framework"
     s.dependency "CryptoSwift"
     s.platform = :ios
-    s.swift_version = "5.3.2"
+    s.swift_version = "5.4"
     s.ios.deployment_target  = '11.0'
     s.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
