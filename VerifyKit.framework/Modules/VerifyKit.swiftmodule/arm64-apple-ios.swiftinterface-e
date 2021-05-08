@@ -2,7 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VerifyKit
 import CoreTelephony
-import CryptoSwift
+import Darwin
 import Foundation
 import MessageUI
 import SafariServices
@@ -10,6 +10,25 @@ import Swift
 import SystemConfiguration
 import UIKit
 @_exported import VerifyKit
+extension PKCS5 {
+  public struct PBKDF2 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: VerifyKit.PKCS5.PBKDF2.Error, b: VerifyKit.PKCS5.PBKDF2.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil, variant: VerifyKit.HMAC.Variant = .sha256) throws
+    public func calculate() throws -> Swift.Array<Swift.UInt8>
+  }
+}
+public protocol AEAD {
+  static var kLen: Swift.Int { get }
+  static var ivRange: Swift.Range<Swift.Int> { get }
+}
 public enum VerifyKitError : Swift.Error {
   case authorizationError
   case apiError(description: Swift.String)
@@ -33,6 +52,34 @@ public struct VerifyKitTheme {
   public var showCloseButton: Swift.Bool
   public init(appName: Swift.String = "VerifyKit", statusBarStyle: UIKit.UIStatusBarStyle = .default, navigationBarBackgroundColor: UIKit.UIColor? = nil, navigationBarForegroundColor: UIKit.UIColor? = nil, showCloseButton: Swift.Bool = true)
 }
+final public class Blowfish {
+  public enum Error : Swift.Error {
+    case dataPaddingRequired
+    case invalidKeyOrInitializationVector
+    case invalidInitializationVector
+    case invalidBlockMode
+    public static func == (a: VerifyKit.Blowfish.Error, b: VerifyKit.Blowfish.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: VerifyKit.BlockMode = CBC(iv: Array<UInt8>(repeating: 0, count: Blowfish.blockSize)), padding: VerifyKit.Padding) throws
+  @objc deinit
+}
+extension Blowfish : VerifyKit.Cipher {
+  final public func encrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+  final public func decrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+}
+public struct BlockModeOption : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = VerifyKit.BlockModeOption
+  public typealias Element = VerifyKit.BlockModeOption
+  public typealias RawValue = Swift.Int
+}
 public struct VerifyKitOptions {
   public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, theme: VerifyKit.VerifyKitTheme = VerifyKitTheme(), deviceID: Swift.String? = nil)
 }
@@ -42,6 +89,28 @@ public protocol VerifyKitDelegate : UIKit.UIViewController {
 }
 public protocol VerifyKitViewController : UIKit.UIViewController {
   var kitDelegate: VerifyKit.VerifyKitDelegate? { get set }
+}
+final public class SHA2 {
+  public enum Variant : Swift.RawRepresentable {
+    case sha224, sha256, sha384, sha512
+    public var digestLength: Swift.Int {
+      get
+    }
+    public var blockSize: Swift.Int {
+      get
+    }
+    public typealias RawValue = Swift.Int
+    public var rawValue: VerifyKit.SHA2.Variant.RawValue {
+      get
+    }
+    public init?(rawValue: VerifyKit.SHA2.Variant.RawValue)
+  }
+  public init(variant: VerifyKit.SHA2.Variant)
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension SHA2 : VerifyKit.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
 }
 public enum ReachabilityError : Swift.Error {
   case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
@@ -124,11 +193,266 @@ extension Reachability {
     get
   }
 }
+public struct ECB : VerifyKit.BlockMode {
+  public let options: VerifyKit.BlockModeOption
+  public init()
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+extension HMAC {
+  convenience public init(key: Swift.String, variant: VerifyKit.HMAC.Variant = .md5) throws
+}
 public protocol CheckSessionProtocol : AnyObject {
   static func checkInterruptedSession(completion: @escaping (Swift.String?) -> Swift.Void)
 }
 extension CheckSessionProtocol {
   public static func checkInterruptedSession(completion: @escaping (Swift.String?) -> Swift.Void)
+}
+extension Array where Element == Swift.UInt8 {
+  public init(hex: Swift.String)
+  public func toHexString() -> Swift.String
+}
+extension Array where Element == Swift.UInt8 {
+  @available(*, deprecated)
+  public func chunks(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
+  public func md5() -> [Element]
+  public func sha1() -> [Element]
+  public func sha224() -> [Element]
+  public func sha256() -> [Element]
+  public func sha384() -> [Element]
+  public func sha512() -> [Element]
+  public func sha2(_ variant: VerifyKit.SHA2.Variant) -> [Element]
+  public func sha3(_ variant: VerifyKit.SHA3.Variant) -> [Element]
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public func crc16(seed: Swift.UInt16? = nil) -> Swift.UInt16
+  public func encrypt(cipher: VerifyKit.Cipher) throws -> [Element]
+  public func decrypt(cipher: VerifyKit.Cipher) throws -> [Element]
+  public func authenticate<A>(with authenticator: A) throws -> [Element] where A : VerifyKit.Authenticator
+}
+public protocol PaddingProtocol {
+  func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+}
+public enum Padding : VerifyKit.PaddingProtocol {
+  case noPadding, zeroPadding, pkcs7, pkcs5, iso78164
+  public func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  public func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  public static func == (a: VerifyKit.Padding, b: VerifyKit.Padding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HKDF {
+  public enum Error : Swift.Error {
+    case invalidInput
+    case derivedKeyTooLong
+    public static func == (a: VerifyKit.HKDF.Error, b: VerifyKit.HKDF.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>? = nil, info: Swift.Array<Swift.UInt8>? = nil, keyLength: Swift.Int? = nil, variant: VerifyKit.HMAC.Variant = .sha256) throws
+  public func calculate() throws -> Swift.Array<Swift.UInt8>
+}
+extension PKCS5 {
+  public struct PBKDF1 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: VerifyKit.PKCS5.PBKDF1.Error, b: VerifyKit.PKCS5.PBKDF1.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public enum Variant {
+      case md5, sha1
+      public static func == (a: VerifyKit.PKCS5.PBKDF1.Variant, b: VerifyKit.PKCS5.PBKDF1.Variant) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, variant: VerifyKit.PKCS5.PBKDF1.Variant = .sha1, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil) throws
+    public func calculate() -> Swift.Array<Swift.UInt8>
+  }
+}
+final public class MD5 {
+  public init()
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension MD5 : VerifyKit.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+extension String {
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func md5() -> Swift.String
+  public func sha1() -> Swift.String
+  public func sha224() -> Swift.String
+  public func sha256() -> Swift.String
+  public func sha384() -> Swift.String
+  public func sha512() -> Swift.String
+  public func sha3(_ variant: VerifyKit.SHA3.Variant) -> Swift.String
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
+  public func crc16(seed: Swift.UInt16? = nil) -> Swift.String
+  public func encrypt(cipher: VerifyKit.Cipher) throws -> Swift.String
+  public func encryptToBase64(cipher: VerifyKit.Cipher) throws -> Swift.String?
+  public func authenticate<A>(with authenticator: A) throws -> Swift.String where A : VerifyKit.Authenticator
+}
+@_inheritsConvenienceInitializers final public class CBCMAC : VerifyKit.CMAC {
+  override final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  override public init(key: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+final public class Poly1305 : VerifyKit.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    public static func == (a: VerifyKit.Poly1305.Error, b: VerifyKit.Poly1305.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension ChaCha20 {
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+extension Rabbit {
+  convenience public init(key: Swift.String) throws
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+final public class Rabbit {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    public static func == (a: VerifyKit.Rabbit.Error, b: VerifyKit.Rabbit.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let ivSize: Swift.Int
+  public static let keySize: Swift.Int
+  public static let blockSize: Swift.Int
+  final public var keySize: Swift.Int {
+    get
+  }
+  convenience public init(key: Swift.Array<Swift.UInt8>) throws
+  public init(key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>?) throws
+  @objc deinit
+}
+extension Rabbit : VerifyKit.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension String {
+  public func decryptBase64ToString(cipher: VerifyKit.Cipher) throws -> Swift.String
+  public func decryptBase64(cipher: VerifyKit.Cipher) throws -> Swift.Array<Swift.UInt8>
+}
+final public class ChaCha20 {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    case notSupported
+    public static func == (a: VerifyKit.ChaCha20.Error, b: VerifyKit.ChaCha20.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, iv nonce: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+extension ChaCha20 : VerifyKit.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension ChaCha20 {
+  public struct ChaChaEncryptor : VerifyKit.Cryptor, VerifyKit.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension ChaCha20 {
+  public struct ChaChaDecryptor : VerifyKit.Cryptor, VerifyKit.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = true) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension ChaCha20 : VerifyKit.Cryptors {
+  final public func makeEncryptor() -> VerifyKit.Cryptor & VerifyKit.Updatable
+  final public func makeDecryptor() -> VerifyKit.Cryptor & VerifyKit.Updatable
+}
+public class CMAC : VerifyKit.Authenticator {
+  public enum Error : Swift.Error {
+    case wrongKeyLength
+    public static func == (a: VerifyKit.CMAC.Error, b: VerifyKit.CMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(key: Swift.Array<Swift.UInt8>) throws
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>, cipher: VerifyKit.Cipher) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+public struct PCBC : VerifyKit.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: VerifyKit.PCBC.Error, b: VerifyKit.PCBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: VerifyKit.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+public struct CBC : VerifyKit.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: VerifyKit.CBC.Error, b: VerifyKit.CBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: VerifyKit.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+public protocol Updatable {
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool, output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+extension Updatable {
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false, output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false, output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish() throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>, output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+final public class Scrypt {
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, dkLen: Swift.Int, N: Swift.Int, r: Swift.Int, p: Swift.Int) throws
+  final public func calculate() throws -> [Swift.UInt8]
+  @objc deinit
 }
 final public class VerifyKit : VerifyKit.CheckSessionProtocol {
   public init()
@@ -136,11 +460,417 @@ final public class VerifyKit : VerifyKit.CheckSessionProtocol {
   final public func viewControllerForLogin() -> VerifyKit.VerifyKitViewController
   @objc deinit
 }
+@_hasMissingDesignatedInitializers final public class Checksum {
+  @objc deinit
+}
+extension Checksum {
+  public static func crc32(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public static func crc32c(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public static func crc16(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt16? = nil) -> Swift.UInt16
+}
+extension Array where Element == Swift.UInt8 {
+  public func toBase64() -> Swift.String?
+  public init(base64: Swift.String)
+}
+public protocol Authenticator {
+  func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public struct CTR {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: VerifyKit.CTR.Error, b: VerifyKit.CTR.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: VerifyKit.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>, counter: Swift.Int = 0)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+public protocol CipherModeWorker {
+  var cipherOperation: VerifyKit.CipherOperationOnBlock { get }
+  var additionalBufferSize: Swift.Int { get }
+  mutating func encrypt(block plaintext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  mutating func decrypt(block ciphertext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+}
+public protocol BlockModeWorker : VerifyKit.CipherModeWorker {
+  var blockSize: Swift.Int { get }
+}
+public protocol CounterModeWorker : VerifyKit.CipherModeWorker {
+  associatedtype Counter
+  var counter: Self.Counter { get set }
+}
+public protocol SeekableModeWorker : VerifyKit.CipherModeWorker {
+  mutating func seek(to position: Swift.Int) throws
+}
+public protocol StreamModeWorker : VerifyKit.CipherModeWorker {
+}
+public protocol FinalizingEncryptModeWorker : VerifyKit.CipherModeWorker {
+  mutating func finalize(encrypt ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public protocol FinalizingDecryptModeWorker : VerifyKit.CipherModeWorker {
+  @discardableResult
+  mutating func willDecryptLast(bytes ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func didDecryptLast(bytes plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func finalize(decrypt plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+extension AES {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: VerifyKit.Padding = .pkcs7) throws
+}
+public enum Bit : Swift.Int {
+  case zero
+  case one
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PKCS5 {
+}
+extension Blowfish {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: VerifyKit.Padding = .pkcs7) throws
+}
+public struct CFB : VerifyKit.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: VerifyKit.CFB.Error, b: VerifyKit.CFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: VerifyKit.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+final public class AES {
+  public enum Error : Swift.Error {
+    case invalidKeySize
+    case dataPaddingRequired
+    case invalidData
+    public static func == (a: VerifyKit.AES.Error, b: VerifyKit.AES.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant : Swift.Int {
+    case aes128, aes192, aes256
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  final public let variant: VerifyKit.AES.Variant
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: VerifyKit.BlockMode, padding: VerifyKit.Padding = .pkcs7) throws
+  @objc deinit
+}
+extension AES : VerifyKit.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public struct OFB : VerifyKit.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: VerifyKit.OFB.Error, b: VerifyKit.OFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: VerifyKit.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+@available(*, renamed: "Digest")
+public typealias Hash = VerifyKit.Digest
+public struct Digest {
+  public static func md5(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha1(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha224(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha256(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha384(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha512(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha2(_ bytes: Swift.Array<Swift.UInt8>, variant: VerifyKit.SHA2.Variant) -> Swift.Array<Swift.UInt8>
+  public static func sha3(_ bytes: Swift.Array<Swift.UInt8>, variant: VerifyKit.SHA3.Variant) -> Swift.Array<Swift.UInt8>
+}
+@_hasMissingDesignatedInitializers final public class AEADChaCha20Poly1305 : VerifyKit.AEAD {
+  public static let kLen: Swift.Int
+  public static var ivRange: Swift.Range<Swift.Int>
+  public static func encrypt(_ plainText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>) throws -> (cipherText: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>)
+  public static func decrypt(_ cipherText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>) throws -> (plainText: Swift.Array<Swift.UInt8>, success: Swift.Bool)
+  @objc deinit
+}
+final public class SHA1 {
+  public init()
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension SHA1 : VerifyKit.Updatable {
+  @discardableResult
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+final public class GCM : VerifyKit.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: VerifyKit.GCM.Mode, b: VerifyKit.GCM.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: VerifyKit.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case fail
+    public static func == (a: VerifyKit.GCM.Error, b: VerifyKit.GCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: VerifyKit.GCM.Mode = .detached)
+  convenience public init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: VerifyKit.GCM.Mode = .detached)
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BlockDecryptor : VerifyKit.Cryptor, VerifyKit.Updatable {
+  public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public func seek(to position: Swift.Int) throws
+  @objc deinit
+}
+public typealias CipherOperationOnBlock = (Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
+public protocol BlockMode {
+  var options: VerifyKit.BlockModeOption { get }
+  func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+public struct CCM {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case invalidParameter
+    case fail
+    public static func == (a: VerifyKit.CCM.Error, b: VerifyKit.CCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: VerifyKit.BlockModeOption
+  public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+}
+final public class SHA3 {
+  final public let blockSize: Swift.Int
+  final public let digestLength: Swift.Int
+  final public let markByte: Swift.UInt8
+  public enum Variant {
+    case sha224, sha256, sha384, sha512, keccak224, keccak256, keccak384, keccak512
+    public var outputLength: Swift.Int {
+      get
+    }
+    public static func == (a: VerifyKit.SHA3.Variant, b: VerifyKit.SHA3.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(variant: VerifyKit.SHA3.Variant)
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension SHA3 : VerifyKit.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+final public class OCB : VerifyKit.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: VerifyKit.OCB.Mode, b: VerifyKit.OCB.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: VerifyKit.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidNonce
+    case fail
+    public static func == (a: VerifyKit.OCB.Error, b: VerifyKit.OCB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(nonce N: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: VerifyKit.OCB.Mode = .detached)
+  convenience public init(nonce N: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: VerifyKit.OCB.Mode = .detached)
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  @objc deinit
+}
+extension Data {
+  public func checksum() -> Swift.UInt16
+  public func md5() -> Foundation.Data
+  public func sha1() -> Foundation.Data
+  public func sha224() -> Foundation.Data
+  public func sha256() -> Foundation.Data
+  public func sha384() -> Foundation.Data
+  public func sha512() -> Foundation.Data
+  public func sha3(_ variant: VerifyKit.SHA3.Variant) -> Foundation.Data
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  public func crc16(seed: Swift.UInt16? = nil) -> Foundation.Data
+  public func encrypt(cipher: VerifyKit.Cipher) throws -> Foundation.Data
+  public func decrypt(cipher: VerifyKit.Cipher) throws -> Foundation.Data
+  public func authenticate(with authenticator: VerifyKit.Authenticator) throws -> Foundation.Data
+}
+extension Data {
+  public init(hex: Swift.String)
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func toHexString() -> Swift.String
+}
+public protocol Cryptor {
+  mutating func seek(to: Swift.Int) throws
+}
+public enum CipherError : Swift.Error {
+  case encrypt
+  case decrypt
+  public static func == (a: VerifyKit.CipherError, b: VerifyKit.CipherError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Cipher : AnyObject {
+  var keySize: Swift.Int { get }
+  func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension Cipher {
+  public func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+final public class HMAC : VerifyKit.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    case invalidInput
+    public static func == (a: VerifyKit.HMAC.Error, b: VerifyKit.HMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant {
+    case sha1, sha256, sha384, sha512, md5
+    public static func == (a: VerifyKit.HMAC.Variant, b: VerifyKit.HMAC.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(key: Swift.Array<Swift.UInt8>, variant: VerifyKit.HMAC.Variant = .md5)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+public protocol _UInt8Type {
+}
+extension UInt8 : VerifyKit._UInt8Type {
+}
+extension UInt8 {
+  public func bits() -> [VerifyKit.Bit]
+  public func bits() -> Swift.String
+}
+public enum PKCS7 {
+}
+public protocol Cryptors : AnyObject {
+  func makeEncryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
+  func makeDecryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
+  static func randomIV(_ blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+extension Cryptors {
+  public static func randomIV(_ count: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+extension AES : VerifyKit.Cryptors {
+  final public func makeEncryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
+  final public func makeDecryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
+}
+extension VerifyKit.PKCS5.PBKDF2.Error : Swift.Equatable {}
+extension VerifyKit.PKCS5.PBKDF2.Error : Swift.Hashable {}
 extension VerifyKit.VerifyKitEnvironment : Swift.Equatable {}
 extension VerifyKit.VerifyKitEnvironment : Swift.Hashable {}
+extension VerifyKit.Blowfish.Error : Swift.Equatable {}
+extension VerifyKit.Blowfish.Error : Swift.Hashable {}
+extension VerifyKit.SHA2.Variant : Swift.Equatable {}
+extension VerifyKit.SHA2.Variant : Swift.Hashable {}
 @available(*, unavailable, renamed: "Connection")
 extension VerifyKit.Reachability.NetworkStatus : Swift.Equatable {}
 @available(*, unavailable, renamed: "Connection")
 extension VerifyKit.Reachability.NetworkStatus : Swift.Hashable {}
 extension VerifyKit.Reachability.Connection : Swift.Equatable {}
 extension VerifyKit.Reachability.Connection : Swift.Hashable {}
+extension VerifyKit.Padding : Swift.Equatable {}
+extension VerifyKit.Padding : Swift.Hashable {}
+extension VerifyKit.HKDF.Error : Swift.Equatable {}
+extension VerifyKit.HKDF.Error : Swift.Hashable {}
+extension VerifyKit.PKCS5.PBKDF1.Error : Swift.Equatable {}
+extension VerifyKit.PKCS5.PBKDF1.Error : Swift.Hashable {}
+extension VerifyKit.PKCS5.PBKDF1.Variant : Swift.Equatable {}
+extension VerifyKit.PKCS5.PBKDF1.Variant : Swift.Hashable {}
+extension VerifyKit.Poly1305.Error : Swift.Equatable {}
+extension VerifyKit.Poly1305.Error : Swift.Hashable {}
+extension VerifyKit.Rabbit.Error : Swift.Equatable {}
+extension VerifyKit.Rabbit.Error : Swift.Hashable {}
+extension VerifyKit.ChaCha20.Error : Swift.Equatable {}
+extension VerifyKit.ChaCha20.Error : Swift.Hashable {}
+extension VerifyKit.CMAC.Error : Swift.Equatable {}
+extension VerifyKit.CMAC.Error : Swift.Hashable {}
+extension VerifyKit.PCBC.Error : Swift.Equatable {}
+extension VerifyKit.PCBC.Error : Swift.Hashable {}
+extension VerifyKit.CBC.Error : Swift.Equatable {}
+extension VerifyKit.CBC.Error : Swift.Hashable {}
+extension VerifyKit.CTR : VerifyKit.BlockMode {}
+extension VerifyKit.CTR.Error : Swift.Equatable {}
+extension VerifyKit.CTR.Error : Swift.Hashable {}
+extension VerifyKit.Bit : Swift.Equatable {}
+extension VerifyKit.Bit : Swift.Hashable {}
+extension VerifyKit.Bit : Swift.RawRepresentable {}
+extension VerifyKit.CFB.Error : Swift.Equatable {}
+extension VerifyKit.CFB.Error : Swift.Hashable {}
+extension VerifyKit.AES.Error : Swift.Equatable {}
+extension VerifyKit.AES.Error : Swift.Hashable {}
+extension VerifyKit.AES.Variant : Swift.Equatable {}
+extension VerifyKit.AES.Variant : Swift.Hashable {}
+extension VerifyKit.AES.Variant : Swift.RawRepresentable {}
+extension VerifyKit.OFB.Error : Swift.Equatable {}
+extension VerifyKit.OFB.Error : Swift.Hashable {}
+extension VerifyKit.GCM.Mode : Swift.Equatable {}
+extension VerifyKit.GCM.Mode : Swift.Hashable {}
+extension VerifyKit.GCM.Error : Swift.Equatable {}
+extension VerifyKit.GCM.Error : Swift.Hashable {}
+extension VerifyKit.CCM : VerifyKit.BlockMode {}
+extension VerifyKit.CCM.Error : Swift.Equatable {}
+extension VerifyKit.CCM.Error : Swift.Hashable {}
+extension VerifyKit.SHA3.Variant : Swift.Equatable {}
+extension VerifyKit.SHA3.Variant : Swift.Hashable {}
+extension VerifyKit.OCB.Mode : Swift.Equatable {}
+extension VerifyKit.OCB.Mode : Swift.Hashable {}
+extension VerifyKit.OCB.Error : Swift.Equatable {}
+extension VerifyKit.OCB.Error : Swift.Hashable {}
+extension VerifyKit.CipherError : Swift.Equatable {}
+extension VerifyKit.CipherError : Swift.Hashable {}
+extension VerifyKit.HMAC.Error : Swift.Equatable {}
+extension VerifyKit.HMAC.Error : Swift.Hashable {}
+extension VerifyKit.HMAC.Variant : Swift.Equatable {}
+extension VerifyKit.HMAC.Variant : Swift.Hashable {}
