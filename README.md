@@ -132,7 +132,7 @@ VerifyKit.checkInterruptedSession { [weak self] sessionCode in
 
 ```swift
 let options = VerifyKitOptions(logActive: true)
-let kit = VerifyKit(options: options)
+let kit = VerifyKitInstance(options: options)
 ```
 
 
