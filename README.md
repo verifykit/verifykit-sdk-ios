@@ -79,7 +79,7 @@ If you don't support Associated Domains, you can enter a custom link with your a
 import VerifyKit
 
 
-let kit = VerifyKit()
+let kit = VerifyKitInstance()
 let viewController = kit.viewControllerForLogin()
 self.present(viewController, animated: true, completion: nil)
 ```
@@ -237,7 +237,7 @@ VerifyKit is owned and maintained by [VerifyKit DevTeam](mailto:sdk@verifykit.co
 
 The MIT License
 
-Copyright (c) 2019-2020 VerifyKit. [http://verifykit.com](http://verifykit.com)
+Copyright (c) 2019 VerifyKit. [http://verifykit.com](http://verifykit.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
