@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "VerifyKit"
-    s.version      = "0.4.3"
+    s.version      = "0.5"
     s.summary      = "VerifyKit: Phone number validation SDK, without the needs of user input."
     s.description  = "VerifyKit is the next gen phone number validation system. Users can easily verify their  phone numbers without the need of entering phone number or a pin code."
     s.homepage     = "http://verifykit.com"

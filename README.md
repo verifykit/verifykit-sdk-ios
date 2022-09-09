@@ -144,7 +144,7 @@ You can change the settings declared in ```VerifyKitOptions``` struct.
 public struct VerifyKitOptions {
     var environment: VerifyKitEnvironment = .debug // default
     var logActive: Bool = true // default
-    var theme: VerifyKitTheme = VerifyKitTheme()
+    var deviceID: String? // optional
 }
 
 public enum VerifyKitEnvironment {
@@ -154,14 +154,6 @@ public enum VerifyKitEnvironment {
 
     /// Production environment for distribution
     case release
-}
-
-public struct VerifyKitTheme {
-    public var appName: String = "VerifyKit"  // default
-    public var statusBarStyle: UIStatusBarStyle = .default  // default
-    public var navigationBarBackgroundColor: UIColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 1.0)  // default
-    public var navigationBarForegroundColor: UIColor = .black  // default
-    public var showCloseButton: Bool = true // default
 }
 ```
 
