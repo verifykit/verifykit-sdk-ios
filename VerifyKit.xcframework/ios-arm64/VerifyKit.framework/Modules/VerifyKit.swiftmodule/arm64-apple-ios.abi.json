@@ -25954,7 +25954,7 @@
       "kind": "StringLiteral",
       "offset": 4720,
       "length": 7,
-      "value": "\"0.5.1\""
+      "value": "\"0.5.2\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
