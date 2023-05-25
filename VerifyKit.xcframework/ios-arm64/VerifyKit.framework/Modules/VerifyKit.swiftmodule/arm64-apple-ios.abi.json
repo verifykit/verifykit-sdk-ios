@@ -5290,6 +5290,20 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VerifyKit"
+      },
+      {
+        "kind": "Import",
+        "name": "SafariServices",
+        "printedName": "SafariServices",
+        "declKind": "Import",
+        "moduleName": "VerifyKit"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -19289,6 +19303,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VerifyKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "CipherError",
         "printedName": "CipherError",
@@ -20624,6 +20648,23 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VerifyKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VerifyKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -20831,6 +20872,198 @@
                 "declKind": "Accessor",
                 "usr": "s:So18NSNotificationNamea9VerifyKitE19reachabilityChangedABvgZ",
                 "mangledName": "$sSo18NSNotificationNamea9VerifyKitE19reachabilityChangedABvgZ",
+                "moduleName": "VerifyKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kBackToNavigate",
+            "printedName": "kBackToNavigate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So18NSNotificationNamea9VerifyKitE15kBackToNavigateABvpZ",
+            "mangledName": "$sSo18NSNotificationNamea9VerifyKitE15kBackToNavigateABvpZ",
+            "moduleName": "VerifyKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So18NSNotificationNamea9VerifyKitE15kBackToNavigateABvgZ",
+                "mangledName": "$sSo18NSNotificationNamea9VerifyKitE15kBackToNavigateABvgZ",
+                "moduleName": "VerifyKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kBackToEditPhoneNumber",
+            "printedName": "kBackToEditPhoneNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvpZ",
+            "mangledName": "$sSo18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvpZ",
+            "moduleName": "VerifyKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvgZ",
+                "mangledName": "$sSo18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvgZ",
+                "moduleName": "VerifyKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kDismissEditPhoneNumber",
+            "printedName": "kDismissEditPhoneNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvpZ",
+            "mangledName": "$sSo18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvpZ",
+            "moduleName": "VerifyKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvgZ",
+                "mangledName": "$sSo18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvgZ",
+                "moduleName": "VerifyKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kCloseSDK",
+            "printedName": "kCloseSDK",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So18NSNotificationNamea9VerifyKitE9kCloseSDKABvpZ",
+            "mangledName": "$sSo18NSNotificationNamea9VerifyKitE9kCloseSDKABvpZ",
+            "moduleName": "VerifyKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So18NSNotificationNamea9VerifyKitE9kCloseSDKABvgZ",
+                "mangledName": "$sSo18NSNotificationNamea9VerifyKitE9kCloseSDKABvgZ",
                 "moduleName": "VerifyKit",
                 "static": true,
                 "implicit": true,
@@ -25257,6 +25490,20 @@
       "value": "4096"
     },
     {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/ViewModel-2\/OtpOutboundViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 321,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/ViewModel-2\/OtpOutboundViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 350,
+      "length": 1,
+      "value": "5"
+    },
+    {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Frameworks\/CryptoSwift\/Blowfish.swift",
       "kind": "IntegerLiteral",
       "offset": 1358,
@@ -25384,22 +25631,50 @@
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
+      "kind": "StringLiteral",
+      "offset": 1943,
+      "length": 17,
+      "value": "\"kBackToNavigate\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
+      "kind": "StringLiteral",
+      "offset": 2020,
+      "length": 24,
+      "value": "\"kBackToEditPhoneNumber\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
+      "kind": "StringLiteral",
+      "offset": 2105,
+      "length": 25,
+      "value": "\"kDismissEditPhoneNumber\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
+      "kind": "StringLiteral",
+      "offset": 2177,
+      "length": 11,
+      "value": "\"kCloseSDK\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 3153,
+      "offset": 3456,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 4284,
+      "offset": 4587,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 4356,
+      "offset": 4659,
       "length": 5,
       "value": "false"
     },
@@ -25518,7 +25793,7 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/ViewModel-2\/PhoneSecondViewModel.swift",
       "kind": "Array",
-      "offset": 267,
+      "offset": 302,
       "length": 2,
       "value": "[]"
     },
@@ -25530,18 +25805,25 @@
       "value": "4096"
     },
     {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 440,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/ApiSessionHelper.swift",
       "kind": "BooleanLiteral",
       "offset": 330,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Extension\/Label+VfkExtension.swift",
+      "kind": "FloatLiteral",
+      "offset": 1141,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Extension\/Label+VfkExtension.swift",
+      "kind": "FloatLiteral",
+      "offset": 1176,
+      "length": 3,
+      "value": "0.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/Base\/VerifyKitNavigationController.swift",
@@ -25644,392 +25926,539 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1109,
+      "offset": 1116,
+      "length": 22,
+      "value": "\".otp.editPhoneNumber\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1189,
       "length": 20,
       "value": "\".otp.pricePolicity\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1186,
+      "offset": 1266,
       "length": 18,
       "value": "\".otp.autoConfirm\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1270,
+      "offset": 1350,
       "length": 28,
       "value": "\".footer.problemDescription\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1358,
+      "offset": 1438,
       "length": 30,
       "value": "\".footer.nextValidationMethod\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1450,
+      "offset": 1529,
+      "length": 25,
+      "value": "\".footer.copyInfoMessage\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1616,
       "length": 17,
       "value": "\".whatsapp.title\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1523,
+      "offset": 1689,
       "length": 27,
       "value": "\".whatsapp.freeDescription\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1608,
+      "offset": 1774,
       "length": 22,
       "value": "\".whatsapp.buttonText\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1690,
+      "offset": 1856,
       "length": 31,
       "value": "\".whatsapp.responseDescription\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1783,
+      "offset": 1949,
       "length": 17,
       "value": "\".telegram.title\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1852,
+      "offset": 2018,
       "length": 27,
       "value": "\".telegram.freeDescription\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1937,
+      "offset": 2103,
       "length": 22,
       "value": "\".telegram.buttonText\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2019,
+      "offset": 2185,
       "length": 31,
       "value": "\".telegram.responseDescription\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2116,
+      "offset": 2282,
       "length": 20,
       "value": "\".phoneNumber.title\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2192,
+      "offset": 2358,
       "length": 26,
       "value": "\".phoneNumber.description\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2280,
+      "offset": 2446,
       "length": 33,
       "value": "\".otpCode.phoneNumberPlaceholder\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2368,
+      "offset": 2534,
       "length": 17,
       "value": "\".phone.contunie\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2446,
+      "offset": 2607,
+      "length": 25,
+      "value": "\".phone.labelDescription\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2688,
+      "length": 22,
+      "value": "\".phone.btnDataPolicy\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2770,
+      "length": 24,
+      "value": "\".phone.useOtherChooses\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2855,
       "length": 14,
       "value": "\".phone.title\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2511,
+      "offset": 2920,
       "length": 20,
       "value": "\".phone.description\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2587,
+      "offset": 2996,
       "length": 24,
       "value": "\".phone.sendConfirmCode\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2670,
-      "length": 13,
-      "value": "\".call.title\""
+      "offset": 3074,
+      "length": 17,
+      "value": "\".phone.titleSMS\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2736,
+      "offset": 3150,
+      "length": 22,
+      "value": "\".phone.titleWhatsapp\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3229,
+      "length": 20,
+      "value": "\".phone.confirmCode\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3308,
+      "length": 32,
+      "value": "\".call.partialNumber.fullNumber\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3393,
       "length": 27,
       "value": "\".call.fullNumber.subtitle\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2819,
+      "offset": 3476,
       "length": 30,
       "value": "\".call.partialNumber.subtitle\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2902,
+      "offset": 3559,
       "length": 30,
       "value": "\".call.fullNumber.description\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 2984,
+      "offset": 3641,
       "length": 33,
       "value": "\".call.partialNumber.description\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3070,
+      "offset": 3727,
       "length": 37,
       "value": "\".call.partialNumber.descriptionBold\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3160,
+      "offset": 3817,
       "length": 33,
       "value": "\".call.fullNumber.subDescription\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3250,
+      "offset": 3907,
       "length": 33,
       "value": "\".call.footer.problemDescription\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3340,
+      "offset": 3997,
       "length": 32,
       "value": "\".footer.otherValidationMethods\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3439,
+      "offset": 4088,
+      "length": 22,
+      "value": "\".call.withLastDigits\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 4172,
+      "length": 25,
+      "value": "\".call.withoutLastDigits\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 4268,
+      "length": 34,
+      "value": "\".enterCallerNumber.weWillCallYou\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 4369,
       "length": 21,
       "value": "\".radio.chooseMethod\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3517,
+      "offset": 4447,
       "length": 20,
       "value": "\".radio.consentText\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3612,
+      "offset": 4542,
       "length": 18,
       "value": "\".otpCode.invalid\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3684,
+      "offset": 4614,
       "length": 18,
       "value": "\".inbound.sendSms\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3753,
+      "offset": 4683,
       "length": 19,
       "value": "\".init.privacyInfo\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3827,
+      "offset": 4757,
       "length": 23,
       "value": "\".init.privacyInfoLink\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3903,
+      "offset": 4838,
+      "length": 26,
+      "value": "\".init.privacyInfoMessage\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 4926,
+      "length": 30,
+      "value": "\".init.privacyInfoMessageLink\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 5009,
       "length": 17,
       "value": "\".result.success\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3970,
+      "offset": 5076,
       "length": 14,
       "value": "\".result.fail\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4037,
+      "offset": 5143,
       "length": 17,
       "value": "\".emptyKit.title\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4106,
+      "offset": 5212,
       "length": 23,
       "value": "\".emptyKit.description\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4185,
+      "offset": 5291,
       "length": 28,
       "value": "\".otpPhone.redirectingToApp\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4267,
+      "offset": 5378,
+      "length": 23,
+      "value": "\".otpPhone.failMessage\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 5455,
       "length": 20,
       "value": "\".result.startAgain\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4366,
+      "offset": 5554,
       "length": 7,
       "value": "\"alert\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4438,
+      "offset": 5626,
       "length": 25,
       "value": "\".invalidCountry.message\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4517,
+      "offset": 5705,
       "length": 23,
       "value": "\".invalidPhone.message\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4590,
+      "offset": 5778,
       "length": 22,
       "value": "\".general.btnpositive\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4720,
-      "length": 7,
-      "value": "\"0.5.2\""
+      "offset": 5850,
+      "length": 22,
+      "value": "\".general.btnNegative\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4807,
+      "offset": 5963,
+      "length": 13,
+      "value": "\"actionSheet\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6042,
+      "length": 8,
+      "value": "\".title\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6111,
+      "length": 23,
+      "value": "\".editPhoneNumberTitle\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6187,
+      "length": 15,
+      "value": "\".timerMessage\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6261,
+      "length": 21,
+      "value": "\".timerTryAgainTitle\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6355,
+      "length": 35,
+      "value": "\".differentVerificationButtonTitle\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6498,
+      "length": 7,
+      "value": "\"0.5.3\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6585,
       "length": 13,
       "value": "\"ReferenceId\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4889,
+      "offset": 6667,
       "length": 31,
       "value": "\"https:\/\/verifykit.com\/privacy\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4995,
+      "offset": 6773,
       "length": 13,
       "value": "\"whatsapp:\/\/\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5039,
+      "offset": 6817,
       "length": 13,
       "value": "\"telegram:\/\/\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5080,
+      "offset": 6858,
       "length": 10,
       "value": "\"viber:\/\/\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5116,
+      "offset": 6894,
       "length": 5,
       "value": "\"otp\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5154,
+      "offset": 6932,
       "length": 12,
       "value": "\"otpInbound\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5198,
+      "offset": 6976,
       "length": 6,
       "value": "\"call\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5240,
+      "offset": 7018,
       "length": 10,
       "value": "\"whatsapp\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5326,
+      "offset": 7104,
       "length": 17,
       "value": "\"Graphik-Regular\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5381,
+      "offset": 7159,
       "length": 18,
       "value": "\"Graphik-Semibold\""
     },
@@ -26106,28 +26535,28 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 409,
+      "offset": 1141,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 450,
+      "offset": 1185,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 515,
+      "offset": 1253,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 557,
+      "offset": 1298,
       "length": 3,
       "value": "0.5"
     },
@@ -26470,7 +26899,7 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CountriesViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 457,
+      "offset": 549,
       "length": 5,
       "value": "false"
     },
@@ -26548,6 +26977,20 @@
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
       "kind": "BooleanLiteral",
       "offset": 1152,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1198,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1030,
       "length": 5,
       "value": "false"
     },
@@ -27894,6 +28337,13 @@
       "offset": 1935,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1366,
+      "length": 1,
+      "value": "5"
     }
   ]
 }
