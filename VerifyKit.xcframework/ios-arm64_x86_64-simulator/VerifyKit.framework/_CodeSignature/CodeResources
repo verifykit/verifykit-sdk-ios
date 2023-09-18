@@ -4,21 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.metadata-version</key>
+		<data>
+		9iPDV+j8PMPl8tX0LZmZD2RaBG0=
+		</data>
 		<key>ActionSheetViewController.nib</key>
 		<data>
 		jlSHQ2OWAOMPGLV9HAeYNiVq3Yc=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		biQHcOvqeT6kaZTUiEBSqN5kHok=
+		6bfcwT7dnSu7mpHJvF6tkEJdhFE=
 		</data>
 		<key>CallOutboundViewController.nib</key>
 		<data>
-		SMfUWarxAgXdNvf4CndFLnx8I4o=
+		x0q6vE2WCOcevsbf6XVVqbY6x8w=
 		</data>
 		<key>CountriesViewController.nib</key>
 		<data>
-		+oaia0vLXwughTMK++N/K0RdiCU=
+		uAVWtly+rIOLIdo/7/IVTHAO0hc=
 		</data>
 		<key>CountryTableViewCell.nib</key>
 		<data>
@@ -42,7 +46,7 @@
 		</data>
 		<key>Headers/VerifyKit-Swift.h</key>
 		<data>
-		fLv1Aa4YKnfP21A14rPUfWz0y0Q=
+		dM94Ylwqp+VqL9Oo7tByQvp3nY4=
 		</data>
 		<key>Headers/VerifyKit.h</key>
 		<data>
@@ -50,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		u2s9+ZcxpgwLVua1kq+ANutOsag=
+		8CcW2WF+gxQ2C63sIh5nwtcwibk=
 		</data>
 		<key>KitTableViewCell.nib</key>
 		<data>
@@ -62,43 +66,43 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ijtPoD8SQZF25z66v/Hpk+iuxas=
+		BeieN4B1e6rru6ufmhAgMGg0O7A=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HqZtj+6E4IGm046rj+DGsJq7HhA=
+		9sy36koXoUfbjJE/rOLgwhyTEYE=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		n76oKTJ26BJJ2Su0jprDjJsMtyk=
+		WVVbG3VRjtzPIBCisAkUT6ta09o=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HqZtj+6E4IGm046rj+DGsJq7HhA=
+		9sy36koXoUfbjJE/rOLgwhyTEYE=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BNLUqSUcsvb2aqC4CRyE79W/hHU=
+		/lFbMpSCKSTXVI5H1gYrf3DSsUI=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ijtPoD8SQZF25z66v/Hpk+iuxas=
+		BeieN4B1e6rru6ufmhAgMGg0O7A=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jGHxbuBHEapDmr4S7F/dpxoPOUE=
+		ut6IsUqHQoJIHyeCvrdP2XZFCpE=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		lhlXZRSq7w03nsef2+YapLPlzG4=
+		oaTIDTNQtKpVgJI1FZ5vO4ymaxo=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jGHxbuBHEapDmr4S7F/dpxoPOUE=
+		ut6IsUqHQoJIHyeCvrdP2XZFCpE=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3rJ1PSUgU4ulsHYb+NhKT0I60gM=
+		ZAsP1YwUQJrl03gIik/uxRcLuOY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -118,11 +122,23 @@
 		</data>
 		<key>PhoneMainViewController.nib</key>
 		<data>
-		Ym01YJh45BDuN3JlB8uHoUhcrtE=
+		S3zbLnz9T14oYbUHtgxzGq05EFM=
+		</data>
+		<key>PhoneNumberMetadata.json</key>
+		<data>
+		6X8AqbX/xSBxFf33mxdT2kJC4nU=
+		</data>
+		<key>PhoneNumberMetadata.xml</key>
+		<data>
+		Q7g6Qdxv+mNd8x7PiOIGUiceSFo=
 		</data>
 		<key>PhoneSecondViewController.nib</key>
 		<data>
-		qbVWK3mrrv31/eic3GS2DwnPjAg=
+		hhdrEa64LcSGiBUC/XR/3KLDAVM=
+		</data>
+		<key>README.md</key>
+		<data>
+		U/RuDNxYAct1jbeJx0MuV41SBQE=
 		</data>
 		<key>RadioKitTableViewCell.nib</key>
 		<data>
@@ -140,9 +156,20 @@
 		<data>
 		umb5u227+C19uEeoxh/AlTSGMGY=
 		</data>
+		<key>update_metadata.sh</key>
+		<data>
+		ixC4ijn/e/DRO2K0vKB+SEqSrxM=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>.metadata-version</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qj9OV2zqH0WehKiFXB6fEBvPGlJHzAJTXZlYxUUHY24=
+			</data>
+		</dict>
 		<key>ActionSheetViewController.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -154,21 +181,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5T5gY9GRayAY7nfU8NNl+2zsTRT12Om77wGe5XTYUaA=
+			3hk8V1kS7cu84Zi/OIPgwoEnVSt1m2E+mp+47yaVVPU=
 			</data>
 		</dict>
 		<key>CallOutboundViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+nim+YIsaY0SAAdmqANWIH7ZiUb5kOrRVFEC25Tnssw=
+			ynz1uGLZfyjHHvBfpI9wYzk8QxEkG7s14d80nLpk76U=
 			</data>
 		</dict>
 		<key>CountriesViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7dqnbAoJrQScN56Mq/AVVO9loMnW4E2J3Xv76xxjOjg=
+			J+nnJKPOcPofZbHqFclapQm1bih4P/lQYx4RvSoRfNM=
 			</data>
 		</dict>
 		<key>CountryTableViewCell.nib</key>
@@ -210,7 +237,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Jo5pDClW5CXKr9lKk3lP2DqIsjTe6z58jxIq8kwoGc=
+			pnWE5pF1Fb+GtOs0t0qcl06r9v0MmrEB3sMNmpzg7E8=
 			</data>
 		</dict>
 		<key>Headers/VerifyKit.h</key>
@@ -238,70 +265,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Bjm8xRyG/g9ZXNOA9uEOfmVC6BOG8zs+0RsBvMGfac=
+			v0utFPOmZD2ah+avykYns3bwjY6fb7wvTeJBQ11gsAk=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kDh85mZQv6fAFol/o5NLC+H4r34EJ3qdPw/2zSfvbNw=
+			gXqKsciqXjdpdiWTEnm4d/k5QqZX5Xvgx3aT9j+vqBE=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			71iJF4Te+g40XUUEBWbl7IhYtsMjDJVOjstSf7jPBhA=
+			3aQbxst7Oj9FH1TXxadPpH/Q+6AICsMExSSXtBVLdT8=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kDh85mZQv6fAFol/o5NLC+H4r34EJ3qdPw/2zSfvbNw=
+			gXqKsciqXjdpdiWTEnm4d/k5QqZX5Xvgx3aT9j+vqBE=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZafwgVdaIiG1vVo8ojwhKw4QIudD05pEssGakFR9Jno=
+			SvUxI5OfX37hSPo0Z0Wxz6rxRnsgXypxG9SO5tQxNIA=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Bjm8xRyG/g9ZXNOA9uEOfmVC6BOG8zs+0RsBvMGfac=
+			v0utFPOmZD2ah+avykYns3bwjY6fb7wvTeJBQ11gsAk=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YO0gkbHgrD+l21O/J3kobO/wZ3z/Q5qjCqOjeXmVNzQ=
+			kAfZMXHN3w0I6nB6YEihy3SwDosq6Nt3nzMfE05OLdw=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RYECVzXj3hrlyusdds4zpRXg+X2Ns0sCWOoOz4e5Flg=
+			j/a8ye6LEIQ8gIQcMcxqMLuKkJSazc2RWJo+/CcFPXQ=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YO0gkbHgrD+l21O/J3kobO/wZ3z/Q5qjCqOjeXmVNzQ=
+			kAfZMXHN3w0I6nB6YEihy3SwDosq6Nt3nzMfE05OLdw=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fjtF4NHJjjtGjdN9Aclh4+Q2UGT0zbV9iYAXhoGWC/U=
+			Bvrui9N+VLDxHmaYjmfruAJ035NEXUQOOAK0GHqSFD8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -336,14 +363,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1IzL8Le7nXlm9aXT2U3aIqWOGPbayVp/Axu11xILJcw=
+			M7eNegD4S9RUMNjDiD6yGRQeHsDLR6pK9GHAfHz2Ag0=
+			</data>
+		</dict>
+		<key>PhoneNumberMetadata.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sSYub9Sia5RsOnpuUMvC66WxshRrnk2o/v2cldh6UDg=
+			</data>
+		</dict>
+		<key>PhoneNumberMetadata.xml</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			liF9HkDAx+aKjlrZon3gFjIYZfE/eenqz4A7SCF5yAQ=
 			</data>
 		</dict>
 		<key>PhoneSecondViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cw4sydSzijP6GgbtpYeHOyP75IlI8M1dMWF8hRS1grA=
+			hruMVTZZNW6VQONtJJsnKmFTM42N9kxD0VXxuzclT8Y=
+			</data>
+		</dict>
+		<key>README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Nf/2XQtYjqoMPCthiZULLZ+3jQBk+EbBosc3NuAnDpw=
 			</data>
 		</dict>
 		<key>RadioKitTableViewCell.nib</key>
@@ -372,6 +420,13 @@
 			<key>hash2</key>
 			<data>
 			cVB5QcLNqRWliG9dMv4GEYlxDtayaw/JkSbDT19bqRk=
+			</data>
+		</dict>
+		<key>update_metadata.sh</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gNOkSxCC31lo0D1Bbx3XndckQCr0t78fK6feyRjZUkY=
 			</data>
 		</dict>
 	</dict>

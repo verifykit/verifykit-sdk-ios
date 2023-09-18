@@ -4,21 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.metadata-version</key>
+		<data>
+		9iPDV+j8PMPl8tX0LZmZD2RaBG0=
+		</data>
 		<key>ActionSheetViewController.nib</key>
 		<data>
 		jlSHQ2OWAOMPGLV9HAeYNiVq3Yc=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		ItgCroQHVOli+GPmq3QCDw8uKZc=
+		dTVz7FGRW2vLp25n5jd2yytMDl4=
 		</data>
 		<key>CallOutboundViewController.nib</key>
 		<data>
-		SMfUWarxAgXdNvf4CndFLnx8I4o=
+		x0q6vE2WCOcevsbf6XVVqbY6x8w=
 		</data>
 		<key>CountriesViewController.nib</key>
 		<data>
-		+oaia0vLXwughTMK++N/K0RdiCU=
+		uAVWtly+rIOLIdo/7/IVTHAO0hc=
 		</data>
 		<key>CountryTableViewCell.nib</key>
 		<data>
@@ -42,7 +46,7 @@
 		</data>
 		<key>Headers/VerifyKit-Swift.h</key>
 		<data>
-		ennIm2DJdtw2oMW2V2F0/+SFYU0=
+		XIISMtY+8iFaIPh08WGJk6gshnI=
 		</data>
 		<key>Headers/VerifyKit.h</key>
 		<data>
@@ -50,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		z5CF3hxIh3GA4LmjSsA36A8nd0E=
+		irM2mr+RIRN4L7+ILMbEZkBSkjU=
 		</data>
 		<key>KitTableViewCell.nib</key>
 		<data>
@@ -62,23 +66,23 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		9yNRDj2gbzs4PLEAv8k1eyZsb2E=
+		jNrSvDkbgboOZht6p6FK05PEc5c=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		ShP4JydM1OuhOtYM9DlcyasRhI0=
+		StVZ9mOMCGrGJtNPPp5GE5I+M7Q=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		YEoFbwq93VnibUDzf6JGoGT37n8=
+		xwvKgdZKxQVFWrrHWblgwEKFaOI=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ShP4JydM1OuhOtYM9DlcyasRhI0=
+		StVZ9mOMCGrGJtNPPp5GE5I+M7Q=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		SUsVhcigvW3ph2AQ0S20ROrC29k=
+		5tMHg/H26CkV8kGvXa9HY5SfIDk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -98,11 +102,23 @@
 		</data>
 		<key>PhoneMainViewController.nib</key>
 		<data>
-		Ym01YJh45BDuN3JlB8uHoUhcrtE=
+		S3zbLnz9T14oYbUHtgxzGq05EFM=
+		</data>
+		<key>PhoneNumberMetadata.json</key>
+		<data>
+		6X8AqbX/xSBxFf33mxdT2kJC4nU=
+		</data>
+		<key>PhoneNumberMetadata.xml</key>
+		<data>
+		Q7g6Qdxv+mNd8x7PiOIGUiceSFo=
 		</data>
 		<key>PhoneSecondViewController.nib</key>
 		<data>
-		qbVWK3mrrv31/eic3GS2DwnPjAg=
+		hhdrEa64LcSGiBUC/XR/3KLDAVM=
+		</data>
+		<key>README.md</key>
+		<data>
+		U/RuDNxYAct1jbeJx0MuV41SBQE=
 		</data>
 		<key>RadioKitTableViewCell.nib</key>
 		<data>
@@ -120,9 +136,20 @@
 		<data>
 		umb5u227+C19uEeoxh/AlTSGMGY=
 		</data>
+		<key>update_metadata.sh</key>
+		<data>
+		ixC4ijn/e/DRO2K0vKB+SEqSrxM=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>.metadata-version</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qj9OV2zqH0WehKiFXB6fEBvPGlJHzAJTXZlYxUUHY24=
+			</data>
+		</dict>
 		<key>ActionSheetViewController.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -134,21 +161,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uu+HBm8imzSNWwMdZ0tuXikYQDiJhghu5endXsCV4KY=
+			2MWMgkbnNkLoYFlrQIuFxyN27XIzK8UEvd1ZAAkdHY0=
 			</data>
 		</dict>
 		<key>CallOutboundViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+nim+YIsaY0SAAdmqANWIH7ZiUb5kOrRVFEC25Tnssw=
+			ynz1uGLZfyjHHvBfpI9wYzk8QxEkG7s14d80nLpk76U=
 			</data>
 		</dict>
 		<key>CountriesViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7dqnbAoJrQScN56Mq/AVVO9loMnW4E2J3Xv76xxjOjg=
+			J+nnJKPOcPofZbHqFclapQm1bih4P/lQYx4RvSoRfNM=
 			</data>
 		</dict>
 		<key>CountryTableViewCell.nib</key>
@@ -190,7 +217,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KuDoxeSY+KAkQup7WvjdiR7i51dlSJ4+B9ODXjAvVxU=
+			FTGtoypLwPUkSnn3TQ+F/rWV+aqfLWD9jYaYqYB57s4=
 			</data>
 		</dict>
 		<key>Headers/VerifyKit.h</key>
@@ -218,35 +245,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yt0nlnxsYACHJc3c6DWtAslrg+lwnsw2Xxb2mmdeJ4M=
+			kLQwp7BD31FP+V2QpufOKoSoz5BlB89Jl4I1olDKeXQ=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WF7RA+3H/Af/NJ3E0tx9oX5AIMRHgB8X3kzeyOCtm9I=
+			YMpSXdMlgV+ZlqYMXyudf8k0FLFsDV/1vvxLc1+h1Ek=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RIxi5F3HW780wBoT4usseddjCj+0SWxCd96LhQBg4aQ=
+			ot9MIGgzoWSJ4DzuCnP+geWaOoUlB53bGThyIMYuReA=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WF7RA+3H/Af/NJ3E0tx9oX5AIMRHgB8X3kzeyOCtm9I=
+			YMpSXdMlgV+ZlqYMXyudf8k0FLFsDV/1vvxLc1+h1Ek=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iRt/qY0z5XVu5hzUFwMHTsm9GGylx7m54u4Tup5i/sc=
+			PTXMJQCm4AQUZwIetFvyVusvZ6Jpyg/Awd9akrE68as=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -281,14 +308,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1IzL8Le7nXlm9aXT2U3aIqWOGPbayVp/Axu11xILJcw=
+			M7eNegD4S9RUMNjDiD6yGRQeHsDLR6pK9GHAfHz2Ag0=
+			</data>
+		</dict>
+		<key>PhoneNumberMetadata.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sSYub9Sia5RsOnpuUMvC66WxshRrnk2o/v2cldh6UDg=
+			</data>
+		</dict>
+		<key>PhoneNumberMetadata.xml</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			liF9HkDAx+aKjlrZon3gFjIYZfE/eenqz4A7SCF5yAQ=
 			</data>
 		</dict>
 		<key>PhoneSecondViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cw4sydSzijP6GgbtpYeHOyP75IlI8M1dMWF8hRS1grA=
+			hruMVTZZNW6VQONtJJsnKmFTM42N9kxD0VXxuzclT8Y=
+			</data>
+		</dict>
+		<key>README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Nf/2XQtYjqoMPCthiZULLZ+3jQBk+EbBosc3NuAnDpw=
 			</data>
 		</dict>
 		<key>RadioKitTableViewCell.nib</key>
@@ -317,6 +365,13 @@
 			<key>hash2</key>
 			<data>
 			cVB5QcLNqRWliG9dMv4GEYlxDtayaw/JkSbDT19bqRk=
+			</data>
+		</dict>
+		<key>update_metadata.sh</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gNOkSxCC31lo0D1Bbx3XndckQCr0t78fK6feyRjZUkY=
 			</data>
 		</dict>
 	</dict>

@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VerifyKit
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import Contacts
 import CoreTelephony
 import Darwin
 import Foundation
@@ -61,7 +62,7 @@ final public class Blowfish {
   }
   public static let blockSize: Swift.Int
   final public let keySize: Swift.Int
-  public init(key: Swift.Array<Swift.UInt8>, blockMode: VerifyKit.BlockMode = CBC(iv: Array<UInt8>(repeating: 0, count: Blowfish.blockSize)), padding: VerifyKit.Padding) throws
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: any VerifyKit.BlockMode = CBC(iv: Array<UInt8>(repeating: 0, count: Blowfish.blockSize)), padding: VerifyKit.Padding) throws
   @objc deinit
 }
 extension VerifyKit.Blowfish : VerifyKit.Cipher {
@@ -83,7 +84,7 @@ public protocol VerifyKitDelegate : UIKit.UIViewController {
   func didFail(with error: VerifyKit.VerifyKitError)
 }
 public protocol VerifyKitViewController : UIKit.UIViewController {
-  var kitDelegate: VerifyKit.VerifyKitDelegate? { get set }
+  var kitDelegate: (any VerifyKit.VerifyKitDelegate)? { get set }
 }
 final public class SHA2 {
   public enum Variant : Swift.RawRepresentable {
@@ -106,6 +107,73 @@ final public class SHA2 {
 }
 extension VerifyKit.SHA2 : VerifyKit.Updatable {
   final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+extension VerifyKit.MetadataTerritory {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case codeID
+    case countryCode
+    case internationalPrefix
+    case mainCountryForCode
+    case nationalPrefix
+    case nationalPrefixFormattingRule
+    case nationalPrefixForParsing
+    case nationalPrefixTransformRule
+    case preferredExtnPrefix
+    case emergency
+    case fixedLine
+    case generalDesc
+    case mobile
+    case pager
+    case personalNumber
+    case premiumRate
+    case sharedCost
+    case tollFree
+    case voicemail
+    case voip
+    case uan
+    case numberFormats
+    case leadingDigits
+    case availableFormats
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension VerifyKit.MetadataPhoneNumberFormat {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case pattern
+    case format
+    case intlFormat
+    case leadingDigitsPatterns
+    case nationalPrefixFormattingRule
+    case nationalPrefixOptionalWhenFormatting
+    case domesticCarrierCodeFormattingRule
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum ReachabilityError : Swift.Error {
   case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
@@ -195,7 +263,7 @@ extension VerifyKit.Reachability {
 public struct ECB : VerifyKit.BlockMode {
   public let options: VerifyKit.BlockModeOption
   public init()
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
 }
 extension VerifyKit.HMAC {
   convenience public init(key: Swift.String, variant: VerifyKit.HMAC.Variant = .md5) throws
@@ -205,6 +273,42 @@ public protocol CheckSessionProtocol : AnyObject {
 }
 extension VerifyKit.CheckSessionProtocol {
   public static func checkInterruptedSession(completion: @escaping (Swift.String?) -> Swift.Void)
+}
+@available(iOS 11.0, *)
+public protocol CountryCodePickerDelegate : AnyObject {
+  func countryCodePickerViewControllerDidPickCountry(_ country: VerifyKit.CountryCodePickerViewController.Country)
+}
+@objc @_hasMissingDesignatedInitializers @available(iOS 11.0, *)
+@_Concurrency.MainActor(unsafe) public class CountryCodePickerViewController : UIKit.UITableViewController {
+  @_Concurrency.MainActor(unsafe) final public let phoneNumberKit: VerifyKit.PhoneNumberKit
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any VerifyKit.CountryCodePickerDelegate)?
+  @_Concurrency.MainActor(unsafe) public init(phoneNumberKit: VerifyKit.PhoneNumberKit, commonCountryCodes: [Swift.String] = PhoneNumberKit.CountryCodePicker.commonCountryCodes)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func sectionIndexTitles(for tableView: UIKit.UITableView) -> [Swift.String]?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc deinit
+}
+@available(iOS 11.0, *)
+extension VerifyKit.CountryCodePickerViewController : UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func updateSearchResults(for searchController: UIKit.UISearchController)
+}
+@available(iOS 11.0, *)
+extension VerifyKit.CountryCodePickerViewController {
+  public struct Country {
+    public var code: Swift.String
+    public var flag: Swift.String
+    public var name: Swift.String
+    public var prefix: Swift.String
+    public init?(for countryCode: Swift.String, with phoneNumberKit: VerifyKit.PhoneNumberKit)
+  }
+  @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Cell : UIKit.UITableViewCell {
+    @objc deinit
+  }
 }
 extension Swift.Array where Element == Swift.UInt8 {
   public init(hex: Swift.String)
@@ -224,8 +328,8 @@ extension Swift.Array where Element == Swift.UInt8 {
   public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
   public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
   public func crc16(seed: Swift.UInt16? = nil) -> Swift.UInt16
-  public func encrypt(cipher: VerifyKit.Cipher) throws -> [Element]
-  public func decrypt(cipher: VerifyKit.Cipher) throws -> [Element]
+  public func encrypt(cipher: any VerifyKit.Cipher) throws -> [Element]
+  public func decrypt(cipher: any VerifyKit.Cipher) throws -> [Element]
   public func authenticate<A>(with authenticator: A) throws -> [Element] where A : VerifyKit.Authenticator
 }
 public protocol PaddingProtocol {
@@ -278,6 +382,50 @@ extension VerifyKit.PKCS5 {
     public func calculate() -> Swift.Array<Swift.UInt8>
   }
 }
+public struct MetadataTerritory : Swift.Decodable {
+  public let codeID: Swift.String
+  public let countryCode: Swift.UInt64
+  public let internationalPrefix: Swift.String?
+  public let mainCountryForCode: Swift.Bool
+  public let nationalPrefix: Swift.String?
+  public let nationalPrefixFormattingRule: Swift.String?
+  public let nationalPrefixForParsing: Swift.String?
+  public let nationalPrefixTransformRule: Swift.String?
+  public let preferredExtnPrefix: Swift.String?
+  public let emergency: VerifyKit.MetadataPhoneNumberDesc?
+  public let fixedLine: VerifyKit.MetadataPhoneNumberDesc?
+  public let generalDesc: VerifyKit.MetadataPhoneNumberDesc?
+  public let mobile: VerifyKit.MetadataPhoneNumberDesc?
+  public let pager: VerifyKit.MetadataPhoneNumberDesc?
+  public let personalNumber: VerifyKit.MetadataPhoneNumberDesc?
+  public let premiumRate: VerifyKit.MetadataPhoneNumberDesc?
+  public let sharedCost: VerifyKit.MetadataPhoneNumberDesc?
+  public let tollFree: VerifyKit.MetadataPhoneNumberDesc?
+  public let voicemail: VerifyKit.MetadataPhoneNumberDesc?
+  public let voip: VerifyKit.MetadataPhoneNumberDesc?
+  public let uan: VerifyKit.MetadataPhoneNumberDesc?
+  public let numberFormats: [VerifyKit.MetadataPhoneNumberFormat]
+  public let leadingDigits: Swift.String?
+}
+public struct MetadataPhoneNumberDesc : Swift.Decodable {
+  public let exampleNumber: Swift.String?
+  public let nationalNumberPattern: Swift.String?
+  public let possibleNumberPattern: Swift.String?
+  public let possibleLengths: VerifyKit.MetadataPossibleLengths?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MetadataPossibleLengths : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MetadataPhoneNumberFormat : Swift.Decodable {
+  public let pattern: Swift.String?
+  public let format: Swift.String?
+  public let intlFormat: Swift.String?
+  public let leadingDigitsPatterns: [Swift.String]?
+  public var nationalPrefixFormattingRule: Swift.String?
+  public let nationalPrefixOptionalWhenFormatting: Swift.Bool?
+  public let domesticCarrierCodeFormattingRule: Swift.String?
+}
 final public class MD5 {
   public init()
   final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
@@ -300,14 +448,43 @@ extension Swift.String {
   public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
   public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
   public func crc16(seed: Swift.UInt16? = nil) -> Swift.String
-  public func encrypt(cipher: VerifyKit.Cipher) throws -> Swift.String
-  public func encryptToBase64(cipher: VerifyKit.Cipher) throws -> Swift.String?
+  public func encrypt(cipher: any VerifyKit.Cipher) throws -> Swift.String
+  public func encryptToBase64(cipher: any VerifyKit.Cipher) throws -> Swift.String?
   public func authenticate<A>(with authenticator: A) throws -> Swift.String where A : VerifyKit.Authenticator
 }
 @_inheritsConvenienceInitializers final public class CBCMAC : VerifyKit.CMAC {
   override final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
   override public init(key: Swift.Array<Swift.UInt8>) throws
   @objc deinit
+}
+public typealias MetadataCallback = (() throws -> Foundation.Data?)
+final public class PhoneNumberKit {
+  public init(metadataCallback: @escaping VerifyKit.MetadataCallback = PhoneNumberKit.defaultMetadataCallback)
+  final public func parse(_ numberString: Swift.String, withRegion region: Swift.String = PhoneNumberKit.defaultRegionCode(), ignoreType: Swift.Bool = false) throws -> VerifyKit.PhoneNumber
+  final public func parse(_ numberStrings: [Swift.String], withRegion region: Swift.String = PhoneNumberKit.defaultRegionCode(), ignoreType: Swift.Bool = false, shouldReturnFailedEmptyNumbers: Swift.Bool = false) -> [VerifyKit.PhoneNumber]
+  final public func isValidPhoneNumber(_ numberString: Swift.String, withRegion region: Swift.String = PhoneNumberKit.defaultRegionCode(), ignoreType: Swift.Bool = false) -> Swift.Bool
+  final public func format(_ phoneNumber: VerifyKit.PhoneNumber, toType formatType: VerifyKit.PhoneNumberFormat, withPrefix prefix: Swift.Bool = true) -> Swift.String
+  final public func allCountries() -> [Swift.String]
+  final public func countries(withCode countryCode: Swift.UInt64) -> [Swift.String]?
+  final public func mainCountry(forCode countryCode: Swift.UInt64) -> Swift.String?
+  final public func countryCode(for country: Swift.String) -> Swift.UInt64?
+  final public func leadingDigits(for country: Swift.String) -> Swift.String?
+  final public func getRegionCode(of phoneNumber: VerifyKit.PhoneNumber) -> Swift.String?
+  final public func getExampleNumber(forCountry countryCode: Swift.String, ofType type: VerifyKit.PhoneNumberType = .mobile) -> VerifyKit.PhoneNumber?
+  final public func getFormattedExampleNumber(forCountry countryCode: Swift.String, ofType type: VerifyKit.PhoneNumberType = .mobile, withFormat format: VerifyKit.PhoneNumberFormat = .international, withPrefix prefix: Swift.Bool = true) -> Swift.String?
+  final public func metadata(for country: Swift.String) -> VerifyKit.MetadataTerritory?
+  final public func metadata(forCode countryCode: Swift.UInt64) -> [VerifyKit.MetadataTerritory]?
+  final public func possiblePhoneNumberLengths(forCountry country: Swift.String, phoneNumberType: VerifyKit.PhoneNumberType, lengthType: VerifyKit.PossibleLengthType) -> [Swift.Int]
+  final public class func defaultRegionCode() -> Swift.String
+  public static func defaultMetadataCallback() throws -> Foundation.Data?
+  @objc deinit
+}
+extension VerifyKit.PhoneNumberKit {
+  public enum CountryCodePicker {
+    public static var commonCountryCodes: [Swift.String]
+    public static var forceModalPresentation: Swift.Bool
+    public static var alwaysShowsSearchBar: Swift.Bool
+  }
 }
 final public class Poly1305 : VerifyKit.Authenticator {
   public enum Error : Swift.Error {
@@ -354,8 +531,8 @@ extension VerifyKit.Rabbit : VerifyKit.Cipher {
   final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
 }
 extension Swift.String {
-  public func decryptBase64ToString(cipher: VerifyKit.Cipher) throws -> Swift.String
-  public func decryptBase64(cipher: VerifyKit.Cipher) throws -> Swift.Array<Swift.UInt8>
+  public func decryptBase64ToString(cipher: any VerifyKit.Cipher) throws -> Swift.String
+  public func decryptBase64(cipher: any VerifyKit.Cipher) throws -> Swift.Array<Swift.UInt8>
 }
 final public class ChaCha20 {
   public enum Error : Swift.Error {
@@ -389,8 +566,8 @@ extension VerifyKit.ChaCha20 {
   }
 }
 extension VerifyKit.ChaCha20 : VerifyKit.Cryptors {
-  final public func makeEncryptor() -> VerifyKit.Cryptor & VerifyKit.Updatable
-  final public func makeDecryptor() -> VerifyKit.Cryptor & VerifyKit.Updatable
+  final public func makeEncryptor() -> any VerifyKit.Cryptor & VerifyKit.Updatable
+  final public func makeDecryptor() -> any VerifyKit.Cryptor & VerifyKit.Updatable
 }
 public class CMAC : VerifyKit.Authenticator {
   public enum Error : Swift.Error {
@@ -403,7 +580,7 @@ public class CMAC : VerifyKit.Authenticator {
   }
   public init(key: Swift.Array<Swift.UInt8>) throws
   public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
-  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>, cipher: VerifyKit.Cipher) throws -> Swift.Array<Swift.UInt8>
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>, cipher: any VerifyKit.Cipher) throws -> Swift.Array<Swift.UInt8>
   @objc deinit
 }
 public struct PCBC : VerifyKit.BlockMode {
@@ -417,7 +594,62 @@ public struct PCBC : VerifyKit.BlockMode {
   }
   public let options: VerifyKit.BlockModeOption
   public init(iv: Swift.Array<Swift.UInt8>)
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
+}
+public enum PhoneNumberError : Swift.Error, Swift.Equatable {
+  case generalError
+  case invalidCountryCode
+  case invalidNumber
+  case tooLong
+  case tooShort
+  case deprecated
+  case metadataNotFound
+  case ambiguousNumber(phoneNumbers: Swift.Set<VerifyKit.PhoneNumber>)
+  public static func == (a: VerifyKit.PhoneNumberError, b: VerifyKit.PhoneNumberError) -> Swift.Bool
+}
+extension VerifyKit.PhoneNumberError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum PhoneNumberFormat {
+  case e164
+  case international
+  case national
+  public static func == (a: VerifyKit.PhoneNumberFormat, b: VerifyKit.PhoneNumberFormat) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PhoneNumberType : Swift.String, Swift.Codable {
+  case fixedLine
+  case mobile
+  case fixedOrMobile
+  case pager
+  case personalNumber
+  case premiumRate
+  case sharedCost
+  case tollFree
+  case voicemail
+  case voip
+  case uan
+  case unknown
+  case notParsed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PossibleLengthType : Swift.String, Swift.Codable {
+  case national
+  case localOnly
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct CBC : VerifyKit.BlockMode {
   public enum Error : Swift.Error {
@@ -430,7 +662,7 @@ public struct CBC : VerifyKit.BlockMode {
   }
   public let options: VerifyKit.BlockModeOption
   public init(iv: Swift.Array<Swift.UInt8>)
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
 }
 public protocol Updatable {
   mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
@@ -456,7 +688,7 @@ final public class Scrypt {
 final public class VerifyKitInstance : VerifyKit.CheckSessionProtocol {
   public init()
   public init(options: VerifyKit.VerifyKitOptions)
-  final public func viewControllerForLogin() -> VerifyKit.VerifyKitViewController
+  final public func viewControllerForLogin() -> any VerifyKit.VerifyKitViewController
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class Checksum {
@@ -485,7 +717,103 @@ public struct CTR {
   }
   public let options: VerifyKit.BlockModeOption
   public init(iv: Swift.Array<Swift.UInt8>, counter: Swift.Int = 0)
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PhoneNumberTextField : UIKit.UITextField, UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) final public let phoneNumberKit: VerifyKit.PhoneNumberKit
+  @_Concurrency.MainActor(unsafe) public var flagButton: UIKit.UIButton {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open func setTextUnformatted(newValue: Swift.String?)
+  @_Concurrency.MainActor(unsafe) open var defaultRegion: Swift.String {
+    get
+    @available(*, deprecated, message: "    The setter of defaultRegion is deprecated,\n    please override defaultRegion in a subclass instead.")
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withPrefix: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withFlag: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withExamplePlaceholder: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var countryCodePlaceholderColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var numberPlaceholderColor: UIKit.UIColor {
+    get
+    set
+  }
+  @available(iOS 11.0, *)
+  @_Concurrency.MainActor(unsafe) public var withDefaultPickerUI: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var modalPresentationStyle: UIKit.UIModalPresentationStyle?
+  @_Concurrency.MainActor(unsafe) public var isPartialFormatterEnabled: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var maxDigits: Swift.Int? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var partialFormatter: VerifyKit.PartialFormatter {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var delegate: (any UIKit.UITextFieldDelegate)? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var currentRegion: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var nationalNumber: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isValidNumber: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var phoneNumber: VerifyKit.PhoneNumber? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) convenience public init(withPhoneNumberKit phoneNumberKit: VerifyKit.PhoneNumberKit)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, phoneNumberKit: VerifyKit.PhoneNumberKit)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) public init(insets: UIKit.UIEdgeInsets, clearButtonPadding: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func updateFlag()
+  @_Concurrency.MainActor(unsafe) open func updatePlaceholder()
+  @_Concurrency.MainActor(unsafe) @objc open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @available(iOS 10.0, tvOS 10.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: UIKit.UITextField.DidEndEditingReason)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @available(iOS 13.0, tvOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidChangeSelection(_ textField: UIKit.UITextField)
+  @objc deinit
+}
+@available(iOS 11.0, *)
+extension VerifyKit.PhoneNumberTextField : VerifyKit.CountryCodePickerDelegate {
+  @_Concurrency.MainActor(unsafe) public func countryCodePickerViewControllerDidPickCountry(_ country: VerifyKit.CountryCodePickerViewController.Country)
+}
+extension VerifyKit.PhoneNumberTextField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func clearButtonRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
 }
 public protocol CipherModeWorker {
   var cipherOperation: VerifyKit.CipherOperationOnBlock { get }
@@ -542,7 +870,47 @@ public struct CFB : VerifyKit.BlockMode {
   }
   public let options: VerifyKit.BlockModeOption
   public init(iv: Swift.Array<Swift.UInt8>)
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
+}
+@_hasMissingDesignatedInitializers final public class PartialFormatter {
+  convenience public init(phoneNumberKit: VerifyKit.PhoneNumberKit = PhoneNumberKit(), defaultRegion: Swift.String = PhoneNumberKit.defaultRegionCode(), withPrefix: Swift.Bool = true, maxDigits: Swift.Int? = nil, ignoreIntlNumbers: Swift.Bool = false)
+  final public var defaultRegion: Swift.String {
+    get
+    set
+  }
+  final public var maxDigits: Swift.Int?
+  final public var currentRegion: Swift.String {
+    get
+  }
+  final public func nationalNumber(from rawNumber: Swift.String) -> Swift.String
+  final public func formatPartial(_ rawNumber: Swift.String) -> Swift.String
+  @objc deinit
+}
+@objc open class PhoneNumberFormatter : Foundation.Formatter {
+  final public let phoneNumberKit: VerifyKit.PhoneNumberKit
+  @objc dynamic public var generatesPhoneNumber: Swift.Bool
+  @objc dynamic public var defaultRegion: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc dynamic public var withPrefix: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc dynamic public var currentRegion: Swift.String {
+    @objc get
+  }
+  public init(phoneNumberKit pnk: VerifyKit.PhoneNumberKit = PhoneNumberKit(), defaultRegion: Swift.String = PhoneNumberKit.defaultRegionCode(), withPrefix: Swift.Bool = true)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension VerifyKit.PhoneNumberFormatter {
+  @objc override dynamic open func string(for obj: Any?) -> Swift.String?
+  @objc override dynamic open func getObjectValue(_ obj: Swift.AutoreleasingUnsafeMutablePointer<Swift.AnyObject?>?, for string: Swift.String, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+  @objc override dynamic open func isPartialStringValid(_ partialStringPtr: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString>, proposedSelectedRange proposedSelRangePtr: Foundation.NSRangePointer?, originalString origString: Swift.String, originalSelectedRange origSelRange: Foundation.NSRange, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+}
+extension VerifyKit.PhoneNumber {
+  public func adjustedNationalNumber() -> Swift.String
 }
 final public class AES {
   public enum Error : Swift.Error {
@@ -566,12 +934,43 @@ final public class AES {
   public static let blockSize: Swift.Int
   final public let keySize: Swift.Int
   final public let variant: VerifyKit.AES.Variant
-  public init(key: Swift.Array<Swift.UInt8>, blockMode: VerifyKit.BlockMode, padding: VerifyKit.Padding = .pkcs7) throws
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: any VerifyKit.BlockMode, padding: VerifyKit.Padding = .pkcs7) throws
   @objc deinit
 }
 extension VerifyKit.AES : VerifyKit.Cipher {
   final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
   final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public struct PhoneNumber {
+  public let numberString: Swift.String
+  public let countryCode: Swift.UInt64
+  public let leadingZero: Swift.Bool
+  public let nationalNumber: Swift.UInt64
+  public let numberExtension: Swift.String?
+  public let type: VerifyKit.PhoneNumberType
+  public let regionID: Swift.String?
+}
+extension VerifyKit.PhoneNumber : Swift.Equatable {
+  public static func == (lhs: VerifyKit.PhoneNumber, rhs: VerifyKit.PhoneNumber) -> Swift.Bool
+}
+extension VerifyKit.PhoneNumber : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension VerifyKit.PhoneNumber {
+  public static func notPhoneNumber() -> VerifyKit.PhoneNumber
+  public func notParsed() -> Swift.Bool
+  public var url: Foundation.URL? {
+    get
+  }
+}
+extension VerifyKit.PhoneNumber {
+  @available(*, unavailable, message: "use PhoneNumberKit instead to produce PhoneNumbers")
+  public init(rawNumber: Swift.String) throws
+  @available(*, unavailable, message: "use PhoneNumberKit instead to produce PhoneNumbers")
+  public init(rawNumber: Swift.String, region: Swift.String) throws
 }
 public struct OFB : VerifyKit.BlockMode {
   public enum Error : Swift.Error {
@@ -584,7 +983,57 @@ public struct OFB : VerifyKit.BlockMode {
   }
   public let options: VerifyKit.BlockModeOption
   public init(iv: Swift.Array<Swift.UInt8>)
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
+}
+public enum PhoneNumberDecodingStrategy {
+  case properties
+  case e164
+  public static var `default`: VerifyKit.PhoneNumberDecodingStrategy
+  public static func == (a: VerifyKit.PhoneNumberDecodingStrategy, b: VerifyKit.PhoneNumberDecodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PhoneNumberEncodingStrategy {
+  case properties
+  case e164
+  public static var `default`: VerifyKit.PhoneNumberEncodingStrategy
+  public static func == (a: VerifyKit.PhoneNumberEncodingStrategy, b: VerifyKit.PhoneNumberEncodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PhoneNumberDecodingUtils {
+  public static var defaultPhoneNumberKit: () -> VerifyKit.PhoneNumberKit
+}
+public enum PhoneNumberEncodingUtils {
+  public static var defaultPhoneNumberKit: () -> VerifyKit.PhoneNumberKit
+}
+extension Foundation.JSONDecoder {
+  public var phoneNumberDecodingStrategy: VerifyKit.PhoneNumberDecodingStrategy {
+    get
+    set
+  }
+  public var phoneNumberKit: () -> VerifyKit.PhoneNumberKit {
+    get
+    set
+  }
+}
+extension Foundation.JSONEncoder {
+  public var phoneNumberEncodingStrategy: VerifyKit.PhoneNumberEncodingStrategy {
+    get
+    set
+  }
+  public var phoneNumberKit: () -> VerifyKit.PhoneNumberKit {
+    get
+    set
+  }
+}
+extension VerifyKit.PhoneNumber : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 @available(*, renamed: "Digest")
 public typealias Hash = VerifyKit.Digest
@@ -640,7 +1089,7 @@ final public class GCM : VerifyKit.BlockMode {
   final public var authenticationTag: Swift.Array<Swift.UInt8>?
   public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: VerifyKit.GCM.Mode = .detached)
   convenience public init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: VerifyKit.GCM.Mode = .detached)
-  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BlockDecryptor : VerifyKit.Cryptor, VerifyKit.Updatable {
@@ -651,7 +1100,7 @@ final public class GCM : VerifyKit.BlockMode {
 public typealias CipherOperationOnBlock = (_ block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
 public protocol BlockMode {
   var options: VerifyKit.BlockModeOption { get }
-  func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
 }
 public struct CCM {
   public enum Error : Swift.Error {
@@ -668,7 +1117,7 @@ public struct CCM {
   public var authenticationTag: Swift.Array<Swift.UInt8>?
   public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
   public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
 }
 final public class SHA3 {
   final public let blockSize: Swift.Int
@@ -715,7 +1164,7 @@ final public class OCB : VerifyKit.BlockMode {
   final public var authenticationTag: Swift.Array<Swift.UInt8>?
   public init(nonce N: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: VerifyKit.OCB.Mode = .detached)
   convenience public init(nonce N: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: VerifyKit.OCB.Mode = .detached)
-  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> VerifyKit.CipherModeWorker
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping VerifyKit.CipherOperationOnBlock, encryptionOperation: @escaping VerifyKit.CipherOperationOnBlock) throws -> any VerifyKit.CipherModeWorker
   @objc deinit
 }
 extension Foundation.Data {
@@ -730,9 +1179,9 @@ extension Foundation.Data {
   public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
   public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
   public func crc16(seed: Swift.UInt16? = nil) -> Foundation.Data
-  public func encrypt(cipher: VerifyKit.Cipher) throws -> Foundation.Data
-  public func decrypt(cipher: VerifyKit.Cipher) throws -> Foundation.Data
-  public func authenticate(with authenticator: VerifyKit.Authenticator) throws -> Foundation.Data
+  public func encrypt(cipher: any VerifyKit.Cipher) throws -> Foundation.Data
+  public func decrypt(cipher: any VerifyKit.Cipher) throws -> Foundation.Data
+  public func authenticate(with authenticator: any VerifyKit.Authenticator) throws -> Foundation.Data
 }
 extension Foundation.Data {
   public init(hex: Swift.String)
@@ -797,16 +1246,16 @@ extension Swift.UInt8 {
 public enum PKCS7 {
 }
 public protocol Cryptors : AnyObject {
-  func makeEncryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
-  func makeDecryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
+  func makeEncryptor() throws -> any VerifyKit.Cryptor & VerifyKit.Updatable
+  func makeDecryptor() throws -> any VerifyKit.Cryptor & VerifyKit.Updatable
   static func randomIV(_ blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
 }
 extension VerifyKit.Cryptors {
   public static func randomIV(_ count: Swift.Int) -> Swift.Array<Swift.UInt8>
 }
 extension VerifyKit.AES : VerifyKit.Cryptors {
-  final public func makeEncryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
-  final public func makeDecryptor() throws -> VerifyKit.Cryptor & VerifyKit.Updatable
+  final public func makeEncryptor() throws -> any VerifyKit.Cryptor & VerifyKit.Updatable
+  final public func makeDecryptor() throws -> any VerifyKit.Cryptor & VerifyKit.Updatable
 }
 extension VerifyKit.PKCS5.PBKDF2.Error : Swift.Equatable {}
 extension VerifyKit.PKCS5.PBKDF2.Error : Swift.Hashable {}
@@ -816,6 +1265,12 @@ extension VerifyKit.Blowfish.Error : Swift.Equatable {}
 extension VerifyKit.Blowfish.Error : Swift.Hashable {}
 extension VerifyKit.SHA2.Variant : Swift.Equatable {}
 extension VerifyKit.SHA2.Variant : Swift.Hashable {}
+extension VerifyKit.MetadataTerritory.CodingKeys : Swift.Equatable {}
+extension VerifyKit.MetadataTerritory.CodingKeys : Swift.Hashable {}
+extension VerifyKit.MetadataTerritory.CodingKeys : Swift.RawRepresentable {}
+extension VerifyKit.MetadataPhoneNumberFormat.CodingKeys : Swift.Equatable {}
+extension VerifyKit.MetadataPhoneNumberFormat.CodingKeys : Swift.Hashable {}
+extension VerifyKit.MetadataPhoneNumberFormat.CodingKeys : Swift.RawRepresentable {}
 @available(*, unavailable, renamed: "Connection")
 extension VerifyKit.Reachability.NetworkStatus : Swift.Hashable {}
 extension VerifyKit.Reachability.Connection : Swift.Equatable {}
@@ -838,6 +1293,14 @@ extension VerifyKit.CMAC.Error : Swift.Equatable {}
 extension VerifyKit.CMAC.Error : Swift.Hashable {}
 extension VerifyKit.PCBC.Error : Swift.Equatable {}
 extension VerifyKit.PCBC.Error : Swift.Hashable {}
+extension VerifyKit.PhoneNumberFormat : Swift.Equatable {}
+extension VerifyKit.PhoneNumberFormat : Swift.Hashable {}
+extension VerifyKit.PhoneNumberType : Swift.Equatable {}
+extension VerifyKit.PhoneNumberType : Swift.Hashable {}
+extension VerifyKit.PhoneNumberType : Swift.RawRepresentable {}
+extension VerifyKit.PossibleLengthType : Swift.Equatable {}
+extension VerifyKit.PossibleLengthType : Swift.Hashable {}
+extension VerifyKit.PossibleLengthType : Swift.RawRepresentable {}
 extension VerifyKit.CBC.Error : Swift.Equatable {}
 extension VerifyKit.CBC.Error : Swift.Hashable {}
 extension VerifyKit.CTR : VerifyKit.BlockMode {}
@@ -855,6 +1318,10 @@ extension VerifyKit.AES.Variant : Swift.Hashable {}
 extension VerifyKit.AES.Variant : Swift.RawRepresentable {}
 extension VerifyKit.OFB.Error : Swift.Equatable {}
 extension VerifyKit.OFB.Error : Swift.Hashable {}
+extension VerifyKit.PhoneNumberDecodingStrategy : Swift.Equatable {}
+extension VerifyKit.PhoneNumberDecodingStrategy : Swift.Hashable {}
+extension VerifyKit.PhoneNumberEncodingStrategy : Swift.Equatable {}
+extension VerifyKit.PhoneNumberEncodingStrategy : Swift.Hashable {}
 extension VerifyKit.GCM.Mode : Swift.Equatable {}
 extension VerifyKit.GCM.Mode : Swift.Hashable {}
 extension VerifyKit.GCM.Error : Swift.Equatable {}
