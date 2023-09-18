@@ -4,17 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.metadata-version</key>
-		<data>
-		9iPDV+j8PMPl8tX0LZmZD2RaBG0=
-		</data>
 		<key>ActionSheetViewController.nib</key>
 		<data>
 		jlSHQ2OWAOMPGLV9HAeYNiVq3Yc=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		6bfcwT7dnSu7mpHJvF6tkEJdhFE=
+		RFmkfDTKOLg3qFuY9TWxHRHnJzM=
 		</data>
 		<key>CallOutboundViewController.nib</key>
 		<data>
@@ -54,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8CcW2WF+gxQ2C63sIh5nwtcwibk=
+		FeXWN2LgUF7eNbM/Wd5FBXAGrFY=
 		</data>
 		<key>KitTableViewCell.nib</key>
 		<data>
@@ -66,7 +62,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		BeieN4B1e6rru6ufmhAgMGg0O7A=
+		l4QloukTofHUzvYq1X3vvR5l5hY=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -82,11 +78,11 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/lFbMpSCKSTXVI5H1gYrf3DSsUI=
+		ceIj/yl+nsZJ60bCkS3nvsikr8c=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		BeieN4B1e6rru6ufmhAgMGg0O7A=
+		l4QloukTofHUzvYq1X3vvR5l5hY=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -102,7 +98,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZAsP1YwUQJrl03gIik/uxRcLuOY=
+		/9fXD9C27/6pGrLuvc4dpc7CFqs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -156,20 +152,9 @@
 		<data>
 		umb5u227+C19uEeoxh/AlTSGMGY=
 		</data>
-		<key>update_metadata.sh</key>
-		<data>
-		ixC4ijn/e/DRO2K0vKB+SEqSrxM=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>.metadata-version</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Qj9OV2zqH0WehKiFXB6fEBvPGlJHzAJTXZlYxUUHY24=
-			</data>
-		</dict>
 		<key>ActionSheetViewController.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -181,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3hk8V1kS7cu84Zi/OIPgwoEnVSt1m2E+mp+47yaVVPU=
+			g7E7Mcw4mL7K6O8p+e96Dk5AJKBg/AnXimBh+UyyET4=
 			</data>
 		</dict>
 		<key>CallOutboundViewController.nib</key>
@@ -265,7 +250,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v0utFPOmZD2ah+avykYns3bwjY6fb7wvTeJBQ11gsAk=
+			zOy7w6M9EFtc1v7G//47i3X8EvaG8orvEZAxl2ujd2o=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -293,14 +278,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SvUxI5OfX37hSPo0Z0Wxz6rxRnsgXypxG9SO5tQxNIA=
+			8mFSZraLo3Z2+nXhqKUgc9Ti8uY4m9MCNfgnT3DbLsA=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			v0utFPOmZD2ah+avykYns3bwjY6fb7wvTeJBQ11gsAk=
+			zOy7w6M9EFtc1v7G//47i3X8EvaG8orvEZAxl2ujd2o=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -328,7 +313,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bvrui9N+VLDxHmaYjmfruAJ035NEXUQOOAK0GHqSFD8=
+			uFefq+SToY/BVCsYlJvRWPgysWbPawG3yQaARd1gRm0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -420,13 +405,6 @@
 			<key>hash2</key>
 			<data>
 			cVB5QcLNqRWliG9dMv4GEYlxDtayaw/JkSbDT19bqRk=
-			</data>
-		</dict>
-		<key>update_metadata.sh</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gNOkSxCC31lo0D1Bbx3XndckQCr0t78fK6feyRjZUkY=
 			</data>
 		</dict>
 	</dict>

@@ -4,17 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.metadata-version</key>
-		<data>
-		9iPDV+j8PMPl8tX0LZmZD2RaBG0=
-		</data>
 		<key>ActionSheetViewController.nib</key>
 		<data>
 		jlSHQ2OWAOMPGLV9HAeYNiVq3Yc=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		dTVz7FGRW2vLp25n5jd2yytMDl4=
+		RFmkfDTKOLg3qFuY9TWxHRHnJzM=
 		</data>
 		<key>CallOutboundViewController.nib</key>
 		<data>
@@ -54,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		irM2mr+RIRN4L7+ILMbEZkBSkjU=
+		8diO/d8JmPOuJohcf7qsoRiJz8o=
 		</data>
 		<key>KitTableViewCell.nib</key>
 		<data>
@@ -66,7 +62,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		jNrSvDkbgboOZht6p6FK05PEc5c=
+		HMso9UN418z9YTq7RKN5EbStV8s=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -82,7 +78,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		5tMHg/H26CkV8kGvXa9HY5SfIDk=
+		dPL9NeKtcmY5I26pu6Bmt0lFt9I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -136,20 +132,9 @@
 		<data>
 		umb5u227+C19uEeoxh/AlTSGMGY=
 		</data>
-		<key>update_metadata.sh</key>
-		<data>
-		ixC4ijn/e/DRO2K0vKB+SEqSrxM=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>.metadata-version</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Qj9OV2zqH0WehKiFXB6fEBvPGlJHzAJTXZlYxUUHY24=
-			</data>
-		</dict>
 		<key>ActionSheetViewController.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -161,7 +146,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2MWMgkbnNkLoYFlrQIuFxyN27XIzK8UEvd1ZAAkdHY0=
+			g7E7Mcw4mL7K6O8p+e96Dk5AJKBg/AnXimBh+UyyET4=
 			</data>
 		</dict>
 		<key>CallOutboundViewController.nib</key>
@@ -245,7 +230,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kLQwp7BD31FP+V2QpufOKoSoz5BlB89Jl4I1olDKeXQ=
+			kaNV9ecifhRk7rTnUkSZdXtsM60gV1UkT9H9qEHMsVM=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -273,7 +258,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PTXMJQCm4AQUZwIetFvyVusvZ6Jpyg/Awd9akrE68as=
+			O0h1opN61WzNTZq/29/4UmKQUf4OOglVSRqKUpa9YX4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -365,13 +350,6 @@
 			<key>hash2</key>
 			<data>
 			cVB5QcLNqRWliG9dMv4GEYlxDtayaw/JkSbDT19bqRk=
-			</data>
-		</dict>
-		<key>update_metadata.sh</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gNOkSxCC31lo0D1Bbx3XndckQCr0t78fK6feyRjZUkY=
 			</data>
 		</dict>
 	</dict>
