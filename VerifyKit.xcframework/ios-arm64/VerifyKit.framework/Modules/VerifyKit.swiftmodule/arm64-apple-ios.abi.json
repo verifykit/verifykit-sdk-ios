@@ -44600,7 +44600,7 @@
       "kind": "StringLiteral",
       "offset": 6498,
       "length": 7,
-      "value": "\"0.5.6\""
+      "value": "\"0.5.7\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
