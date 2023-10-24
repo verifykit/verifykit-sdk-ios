@@ -1,7 +1,7 @@
 framework module VerifyKit {
   umbrella header "VerifyKit.h"
-
   export *
+
   module * { export * }
 }
 
