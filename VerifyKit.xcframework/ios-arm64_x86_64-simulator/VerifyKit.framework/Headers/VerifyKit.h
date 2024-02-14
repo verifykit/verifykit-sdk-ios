@@ -16,4 +16,11 @@ FOUNDATION_EXPORT const unsigned char VerifyKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <VerifyKit/PublicHeader.h>
 
-
+@protocol VerifyKitViewController;
+@protocol VerifyKitObjCDelegate;
+@protocol ActionSheetDelegate;
+@protocol Updateable;
+@protocol VerifyKitResultProtocol;
+@protocol VerifyKitStartProtocol;
+@protocol VerifyKitFallbackProtocol;
+@protocol CountryCodePickerDelegate;

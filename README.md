@@ -105,6 +105,21 @@ extension ViewController: VerifyKitDelegate {
 VerifyKit only dismisses ```viewControllerForLogin()``` automatically when ```didSuccess``` delegate is called.
 To give user a chance to try other validation methods or to start again, ```viewControllerForLogin()``` doesn't get dismissed on ```didFail```. If you want to dismiss it on some specific error type, you can do that manually.
 
+### Objective-C
+
+Starting with version 0.5.9, you can use VerifyKit inside Objective-C projects.
+
+```objective-c
+    VerifyKitOptions *options = [[VerifyKitOptions alloc] initWithEnvironment: VerifyKitEnvironmentDebug logActive: YES deviceID: nil];
+    VerifyKitInstance *kit = [[VerifyKitInstance alloc] init];
+    
+    UIViewController<VerifyKitObjCViewController> *controller = [kit viewControllerForLogin_objC];
+    
+    [controller setKitObjCDelegate: self];
+
+    [self presentViewController:controller animated:YES completion:nil];
+```
+
 ##
 
 
@@ -126,6 +141,18 @@ VerifyKit.checkInterruptedSession { [weak self] sessionCode in
   // Tell your API.
   print("sessionCode \(sessionCode)")
 }
+```
+
+```objective-c
+    [VerifyKitInstance checkInterruptedSessionWithCompletion:^(NSString * _Nullable sessionCode) {
+        if (sessionCode == nil) {
+            // Start VerifyKit flow or do what your app needs
+        } else {
+            // You have an interrupted sessionCode from last time.
+              // Tell your API.
+            NSLog(@"sessionCode %@", sessionCode);
+        }
+    }];
 ```
 
 ## Configuration
