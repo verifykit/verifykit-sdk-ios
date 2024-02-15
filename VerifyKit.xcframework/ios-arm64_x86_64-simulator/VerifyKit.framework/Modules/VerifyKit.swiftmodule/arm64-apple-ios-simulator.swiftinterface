@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VerifyKit
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Contacts
@@ -103,18 +103,23 @@ extension VerifyKit.MetadataPhoneNumberFormat {
   }
   public init(from decoder: any Swift.Decoder) throws
 }
+@objc @_inheritsConvenienceInitializers open class VerifyKitNSError : Foundation.NSError {
+  @objc override dynamic public init(domain: Swift.String, code: Swift.Int, userInfo dict: [Swift.String : Any]? = nil)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 public enum VerifyKitError : Swift.Error {
   case authorizationError
   case apiError(description: Swift.String)
   case urlSchemeError
   case cancelled
 }
-public enum VerifyKitEnvironment {
-  case debug
-  case release
-  public static func == (a: VerifyKit.VerifyKitEnvironment, b: VerifyKit.VerifyKitEnvironment) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+@objc public enum VerifyKitEnvironment : Swift.Int {
+  case debug = 0
+  case release = 1
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -146,14 +151,22 @@ public struct BlockModeOption : Swift.OptionSet {
   public typealias Element = VerifyKit.BlockModeOption
   public typealias RawValue = Swift.Int
 }
-public struct VerifyKitOptions {
-  public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = nil)
+@objc open class VerifyKitOptions : ObjectiveC.NSObject {
+  @objc public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = nil)
+  @objc deinit
 }
-public protocol VerifyKitDelegate : UIKit.UIViewController {
+@objc public protocol VerifyKitObjCDelegate {
+  @objc func didSuccess(with sessionCode: Swift.String)
+  @objc func didFail(with nsError: VerifyKit.VerifyKitNSError)
+}
+public protocol VerifyKitDelegate {
   func didSuccess(with sessionCode: Swift.String)
   func didFail(with error: VerifyKit.VerifyKitError)
 }
-public protocol VerifyKitViewController : UIKit.UIViewController {
+@objc public protocol VerifyKitObjCViewController {
+  @objc var kitObjCDelegate: (any VerifyKit.VerifyKitObjCDelegate)? { get set }
+}
+public protocol VerifyKitViewController {
   var kitDelegate: (any VerifyKit.VerifyKitDelegate)? { get set }
 }
 final public class SHA2 {
@@ -299,12 +312,6 @@ extension VerifyKit.PhoneNumberKit {
 }
 extension VerifyKit.HMAC {
   convenience public init(key: Swift.String, variant: VerifyKit.HMAC.Variant = .md5) throws
-}
-public protocol CheckSessionProtocol : AnyObject {
-  static func checkInterruptedSession(completion: @escaping (Swift.String?) -> Swift.Void)
-}
-extension VerifyKit.CheckSessionProtocol {
-  public static func checkInterruptedSession(completion: @escaping (Swift.String?) -> Swift.Void)
 }
 extension Swift.Array where Element == Swift.UInt8 {
   public init(hex: Swift.String)
@@ -724,10 +731,12 @@ final public class Scrypt {
   final public func calculate() throws -> [Swift.UInt8]
   @objc deinit
 }
-final public class VerifyKitInstance : VerifyKit.CheckSessionProtocol {
-  public init()
+@objc @_inheritsConvenienceInitializers final public class VerifyKitInstance : ObjectiveC.NSObject {
+  @objc override dynamic public init()
   public init(options: VerifyKit.VerifyKitOptions)
   final public func viewControllerForLogin() -> any VerifyKit.VerifyKitViewController
+  @objc final public func viewControllerForLogin_objC() -> any UIKit.UIViewController & VerifyKit.VerifyKitObjCViewController
+  @objc public static func checkInterruptedSession(completion: @escaping (_ sessionCode: Swift.String?) -> Swift.Void)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class Checksum {
@@ -1278,6 +1287,7 @@ extension VerifyKit.MetadataPhoneNumberFormat.CodingKeys : Swift.Hashable {}
 extension VerifyKit.MetadataPhoneNumberFormat.CodingKeys : Swift.RawRepresentable {}
 extension VerifyKit.VerifyKitEnvironment : Swift.Equatable {}
 extension VerifyKit.VerifyKitEnvironment : Swift.Hashable {}
+extension VerifyKit.VerifyKitEnvironment : Swift.RawRepresentable {}
 extension VerifyKit.Blowfish.Error : Swift.Equatable {}
 extension VerifyKit.Blowfish.Error : Swift.Hashable {}
 extension VerifyKit.SHA2.Variant : Swift.Equatable {}
