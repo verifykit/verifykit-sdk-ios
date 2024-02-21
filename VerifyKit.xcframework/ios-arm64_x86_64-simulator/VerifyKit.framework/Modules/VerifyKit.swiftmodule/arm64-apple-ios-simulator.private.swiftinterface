@@ -152,7 +152,7 @@ public struct BlockModeOption : Swift.OptionSet {
   public typealias RawValue = Swift.Int
 }
 @objc open class VerifyKitOptions : ObjectiveC.NSObject {
-  @objc public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = nil)
+  @objc public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = "")
   @objc deinit
 }
 @objc public protocol VerifyKitObjCDelegate {
@@ -164,9 +164,9 @@ public protocol VerifyKitDelegate {
   func didFail(with error: VerifyKit.VerifyKitError)
 }
 @objc public protocol VerifyKitObjCViewController {
-  @objc var kitObjCDelegate: (any VerifyKit.VerifyKitObjCDelegate)? { get set }
+  @objc weak var kitObjCDelegate: (any VerifyKit.VerifyKitObjCDelegate)? { get set }
 }
-public protocol VerifyKitViewController {
+public protocol VerifyKitViewController : UIKit.UIViewController {
   var kitDelegate: (any VerifyKit.VerifyKitDelegate)? { get set }
 }
 final public class SHA2 {

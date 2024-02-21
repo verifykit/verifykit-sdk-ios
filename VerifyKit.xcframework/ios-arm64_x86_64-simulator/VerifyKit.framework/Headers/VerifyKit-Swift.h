@@ -451,7 +451,7 @@ SWIFT_PROTOCOL("_TtP9VerifyKit21VerifyKitObjCDelegate_")
 
 SWIFT_PROTOCOL("_TtP9VerifyKit27VerifyKitObjCViewController_")
 @protocol VerifyKitObjCViewController
-@property (nonatomic, strong) id <VerifyKitObjCDelegate> _Nullable kitObjCDelegate;
+@property (nonatomic, weak) id <VerifyKitObjCDelegate> _Nullable kitObjCDelegate;
 @end
 
 
@@ -924,7 +924,7 @@ SWIFT_PROTOCOL("_TtP9VerifyKit21VerifyKitObjCDelegate_")
 
 SWIFT_PROTOCOL("_TtP9VerifyKit27VerifyKitObjCViewController_")
 @protocol VerifyKitObjCViewController
-@property (nonatomic, strong) id <VerifyKitObjCDelegate> _Nullable kitObjCDelegate;
+@property (nonatomic, weak) id <VerifyKitObjCDelegate> _Nullable kitObjCDelegate;
 @end
 
 
