@@ -46788,7 +46788,7 @@
       "kind": "StringLiteral",
       "offset": 6758,
       "length": 7,
-      "value": "\"0.5.8\""
+      "value": "\"0.6.1\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
@@ -59085,406 +59085,406 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 827,
+      "offset": 849,
       "length": 39,
       "value": "\"ios \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 865,
+      "offset": 887,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1073,
+      "offset": 1095,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1117,
+      "offset": 1139,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1254,
+      "offset": 1276,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1352,
+      "offset": 1374,
       "length": 4,
       "value": "\"en\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1431,
+      "offset": 1453,
       "length": 52,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1476,
+      "offset": 1498,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1482,
+      "offset": 1504,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1558,
+      "offset": 1580,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 1757,
+      "offset": 1779,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2025,
+      "offset": 2047,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2113,
+      "offset": 2135,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2157,
+      "offset": 2179,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2201,
+      "offset": 2223,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2288,
+      "offset": 2310,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2454,
+      "offset": 2476,
       "length": 73,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2478,
+      "offset": 2500,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2502,
+      "offset": 2524,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2526,
+      "offset": 2548,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 2631,
+      "offset": 2653,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3084,
+      "offset": 3106,
       "length": 28,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3094,
+      "offset": 3116,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3111,
+      "offset": 3133,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3259,
+      "offset": 3281,
       "length": 20,
       "value": "\"VerifyKit\/\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3278,
+      "offset": 3300,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3328,
+      "offset": 3350,
       "length": 98,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3342,
+      "offset": 3364,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3356,
+      "offset": 3378,
       "length": 1,
       "value": "\" (\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3367,
+      "offset": 3389,
       "length": 1,
       "value": "\"; build:\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3386,
+      "offset": 3408,
       "length": 1,
       "value": "\"; \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3404,
+      "offset": 3426,
       "length": 1,
       "value": "\") \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3425,
+      "offset": 3447,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3453,
+      "offset": 3475,
       "length": 11,
       "value": "\"VerifyKit\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3579,
+      "offset": 3601,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3610,
+      "offset": 3632,
       "length": 10,
       "value": "\"X-VFK-Os\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3647,
+      "offset": 3669,
       "length": 19,
       "value": "\"X-VFK-Sdk-Version\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3693,
+      "offset": 3715,
       "length": 19,
       "value": "\"X-VFK-App-Version\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3743,
+      "offset": 3765,
       "length": 24,
       "value": "\"X-VFK-Client-Device-Id\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3788,
+      "offset": 3810,
       "length": 12,
       "value": "\"X-VFK-Lang\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3826,
+      "offset": 3848,
       "length": 21,
       "value": "\"X-VFK-Req-Timestamp\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3873,
+      "offset": 3895,
       "length": 21,
       "value": "\"X-VFK-Req-Signature\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3920,
+      "offset": 3942,
       "length": 17,
       "value": "\"X-VFK-Encrypted\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3963,
+      "offset": 3985,
       "length": 18,
       "value": "\"X-VFK-Client-Key\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3579,
+      "offset": 3601,
       "length": 12,
       "value": "\"User-Agent\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3610,
+      "offset": 3632,
       "length": 10,
       "value": "\"X-VFK-Os\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3647,
+      "offset": 3669,
       "length": 19,
       "value": "\"X-VFK-Sdk-Version\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3693,
+      "offset": 3715,
       "length": 19,
       "value": "\"X-VFK-App-Version\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3743,
+      "offset": 3765,
       "length": 24,
       "value": "\"X-VFK-Client-Device-Id\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3788,
+      "offset": 3810,
       "length": 12,
       "value": "\"X-VFK-Lang\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3826,
+      "offset": 3848,
       "length": 21,
       "value": "\"X-VFK-Req-Timestamp\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3873,
+      "offset": 3895,
       "length": 21,
       "value": "\"X-VFK-Req-Signature\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3920,
+      "offset": 3942,
       "length": 17,
       "value": "\"X-VFK-Encrypted\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 3963,
+      "offset": 3985,
       "length": 18,
       "value": "\"X-VFK-Client-Key\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 4131,
+      "offset": 4153,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 4158,
+      "offset": 4180,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 4131,
+      "offset": 4153,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Model\/Base\/BaseRequestHeaderModel.swift",
       "kind": "StringLiteral",
-      "offset": 4158,
+      "offset": 4180,
       "length": 3,
       "value": "\"0\""
     },
