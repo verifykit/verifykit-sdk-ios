@@ -1641,7 +1641,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(environment:logActive:deviceID:)",
+            "printedName": "init(environment:logActive:deviceID:countryCode:phoneCode:phoneNumber:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1677,13 +1677,58 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@VerifyKit@objc(cs)VerifyKitOptions(im)initWithEnvironment:logActive:deviceID:",
-            "mangledName": "$s9VerifyKit0aB7OptionsC11environment9logActive8deviceIDAcA0aB11EnvironmentO_SbSSSgtcfc",
+            "usr": "c:@M@VerifyKit@objc(cs)VerifyKitOptions(im)initWithEnvironment:logActive:deviceID:countryCode:phoneCode:phoneNumber:",
+            "mangledName": "$s9VerifyKit0aB7OptionsC11environment9logActive8deviceID11countryCode05phoneJ00K6NumberAcA0aB11EnvironmentO_SbSSSgA3Ltcfc",
             "moduleName": "VerifyKit",
-            "objc_name": "initWithEnvironment:logActive:deviceID:",
+            "objc_name": "initWithEnvironment:logActive:deviceID:countryCode:phoneCode:phoneNumber:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -36942,150 +36987,6 @@
           },
           {
             "kind": "Var",
-            "name": "kBackToNavigate",
-            "printedName": "kBackToNavigate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So18NSNotificationNamea9VerifyKitE15kBackToNavigateABvpZ",
-            "mangledName": "$sSo18NSNotificationNamea9VerifyKitE15kBackToNavigateABvpZ",
-            "moduleName": "VerifyKit",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage"
-            ],
-            "isFromExtension": true,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Name",
-                    "printedName": "Foundation.NSNotification.Name",
-                    "usr": "c:@T@NSNotificationName"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So18NSNotificationNamea9VerifyKitE15kBackToNavigateABvgZ",
-                "mangledName": "$sSo18NSNotificationNamea9VerifyKitE15kBackToNavigateABvgZ",
-                "moduleName": "VerifyKit",
-                "static": true,
-                "implicit": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "kBackToEditPhoneNumber",
-            "printedName": "kBackToEditPhoneNumber",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvpZ",
-            "mangledName": "$sSo18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvpZ",
-            "moduleName": "VerifyKit",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage"
-            ],
-            "isFromExtension": true,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Name",
-                    "printedName": "Foundation.NSNotification.Name",
-                    "usr": "c:@T@NSNotificationName"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvgZ",
-                "mangledName": "$sSo18NSNotificationNamea9VerifyKitE22kBackToEditPhoneNumberABvgZ",
-                "moduleName": "VerifyKit",
-                "static": true,
-                "implicit": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "kDismissEditPhoneNumber",
-            "printedName": "kDismissEditPhoneNumber",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvpZ",
-            "mangledName": "$sSo18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvpZ",
-            "moduleName": "VerifyKit",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage"
-            ],
-            "isFromExtension": true,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Name",
-                    "printedName": "Foundation.NSNotification.Name",
-                    "usr": "c:@T@NSNotificationName"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvgZ",
-                "mangledName": "$sSo18NSNotificationNamea9VerifyKitE23kDismissEditPhoneNumberABvgZ",
-                "moduleName": "VerifyKit",
-                "static": true,
-                "implicit": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "kCloseSDK",
             "printedName": "kCloseSDK",
             "children": [
@@ -41375,168 +41276,182 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1331,
+      "offset": 1274,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1376,
+      "offset": 1319,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1438,
+      "offset": 1381,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1491,
+      "offset": 1434,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1665,
+      "offset": 1608,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1711,
+      "offset": 1654,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1763,
+      "offset": 1706,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1811,
+      "offset": 1754,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2504,
+      "offset": 2447,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2674,
+      "offset": 2617,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3627,
+      "offset": 3570,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3988,
+      "offset": 3931,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5440,
+      "offset": 4794,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5483,
+      "offset": 4837,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5578,
+      "offset": 4932,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5768,
+      "offset": 5122,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5821,
+      "offset": 5175,
       "length": 51,
       "value": "\"MFMessageComposeViewController result: \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5870,
+      "offset": 5224,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 5979,
+      "offset": 5333,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 6250,
+      "offset": 5604,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6811,
+      "offset": 6165,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 7002,
+      "offset": 6356,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7660,
+      "offset": 7014,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7909,
+      "offset": 7263,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 7675,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpInboundViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7911,
       "length": 4,
       "value": "true"
     },
@@ -42810,14 +42725,35 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
       "kind": "BooleanLiteral",
-      "offset": 529,
+      "offset": 729,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
       "kind": "StringLiteral",
-      "offset": 571,
+      "offset": 777,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 826,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 873,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 922,
       "length": 2,
       "value": "\"\""
     },
@@ -44371,350 +44307,329 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 1943,
-      "length": 17,
-      "value": "\"kBackToNavigate\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
-      "kind": "StringLiteral",
-      "offset": 2020,
-      "length": 24,
-      "value": "\"kBackToEditPhoneNumber\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
-      "kind": "StringLiteral",
-      "offset": 2105,
-      "length": 25,
-      "value": "\"kDismissEditPhoneNumber\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
-      "kind": "StringLiteral",
-      "offset": 2177,
+      "offset": 1937,
       "length": 11,
       "value": "\"kCloseSDK\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 2646,
+      "offset": 2406,
       "length": 10,
       "value": "\"Cellular\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 2700,
+      "offset": 2460,
       "length": 6,
       "value": "\"WiFi\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 2746,
+      "offset": 2506,
       "length": 15,
       "value": "\"No Connection\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 2990,
+      "offset": 2750,
       "length": 10,
       "value": "\"Cellular\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 3032,
+      "offset": 2792,
       "length": 6,
       "value": "\"WiFi\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 3077,
+      "offset": 2837,
       "length": 15,
       "value": "\"No Connection\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 3456,
+      "offset": 3216,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 3927,
+      "offset": 3687,
       "length": 15,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 3941,
+      "offset": 3701,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 4587,
+      "offset": 4347,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 4659,
+      "offset": 4419,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 5319,
+      "offset": 5079,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 5431,
+      "offset": 5191,
       "length": 32,
       "value": "\"uk.co.ashleymills.reachability\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "IntegerLiteral",
-      "offset": 7940,
+      "offset": 7700,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 8947,
+      "offset": 8707,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 9540,
+      "offset": 9300,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "BooleanLiteral",
-      "offset": 9612,
+      "offset": 9372,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 10426,
+      "offset": 10186,
       "length": 19,
       "value": "\"unavailable flags\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13428,
+      "offset": 13188,
       "length": 3,
       "value": "\"W\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13434,
+      "offset": 13194,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13475,
+      "offset": 13235,
       "length": 3,
       "value": "\"R\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13481,
+      "offset": 13241,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13531,
+      "offset": 13291,
       "length": 3,
       "value": "\"c\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13537,
+      "offset": 13297,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13588,
+      "offset": 13348,
       "length": 3,
       "value": "\"t\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13594,
+      "offset": 13354,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13646,
+      "offset": 13406,
       "length": 3,
       "value": "\"i\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13652,
+      "offset": 13412,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13703,
+      "offset": 13463,
       "length": 3,
       "value": "\"C\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13709,
+      "offset": 13469,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13759,
+      "offset": 13519,
       "length": 3,
       "value": "\"D\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13765,
+      "offset": 13525,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13809,
+      "offset": 13569,
       "length": 3,
       "value": "\"l\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13815,
+      "offset": 13575,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13853,
+      "offset": 13613,
       "length": 3,
       "value": "\"d\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13859,
+      "offset": 13619,
       "length": 3,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13879,
+      "offset": 13639,
       "length": 39,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13884,
+      "offset": 13644,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13888,
+      "offset": 13648,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13893,
+      "offset": 13653,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13897,
+      "offset": 13657,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13901,
+      "offset": 13661,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13905,
+      "offset": 13665,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13909,
+      "offset": 13669,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13913,
+      "offset": 13673,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Networking\/Helper\/Reachability.swift",
       "kind": "StringLiteral",
-      "offset": 13917,
+      "offset": 13677,
       "length": 1,
       "value": "\"\""
     },
@@ -45573,6 +45488,20 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ThirdPartyAppViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 7864,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ThirdPartyAppViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8100,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/ViewModel-2\/PhoneSecondViewModel.swift",
       "kind": "Array",
       "offset": 302,
@@ -45686,435 +45615,470 @@
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1918,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1853,
+      "offset": 1977,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2068,
+      "offset": 2192,
       "length": 8,
       "value": "\"d4d6df\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2142,
+      "offset": 2266,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2193,
+      "offset": 2317,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2247,
+      "offset": 2371,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2292,
+      "offset": 2416,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2686,
+      "offset": 2810,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2736,
+      "offset": 2860,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2788,
+      "offset": 2912,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2837,
+      "offset": 2961,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3465,
+      "offset": 3589,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3633,
+      "offset": 3757,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4381,
+      "offset": 4505,
       "length": 3,
       "value": "\"+\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4411,
+      "offset": 4535,
       "length": 3,
       "value": "\"+\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4821,
+      "offset": 4945,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5182,
+      "offset": 5306,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 5299,
+      "offset": 5423,
       "length": 4,
       "value": "0.35"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5496,
+      "offset": 5620,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 5556,
+      "offset": 5680,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 6170,
+      "offset": 6294,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6253,
+      "offset": 6377,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6423,
+      "offset": 6547,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6531,
+      "offset": 6655,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6844,
+      "offset": 6968,
       "length": 3,
       "value": "\"+\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6883,
+      "offset": 7007,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6959,
+      "offset": 7083,
       "length": 85,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7001,
+      "offset": 7125,
       "length": 3,
       "value": "\"+\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7005,
+      "offset": 7129,
       "length": 1,
       "value": "\"  \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7040,
+      "offset": 7164,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7043,
+      "offset": 7167,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7287,
+      "offset": 7411,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7329,
+      "offset": 7453,
       "length": 3,
       "value": "\"#\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7340,
+      "offset": 7464,
       "length": 3,
       "value": "\"*\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7383,
+      "offset": 7507,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7394,
+      "offset": 7518,
       "length": 3,
       "value": "\"#\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 7428,
+      "offset": 7552,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7484,
+      "offset": 7608,
       "length": 3,
       "value": "\"*\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 7524,
+      "offset": 7648,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 7650,
+      "offset": 7774,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7707,
+      "offset": 7831,
       "length": 3,
       "value": "\"*\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 7747,
+      "offset": 7871,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7816,
+      "offset": 7940,
       "length": 3,
       "value": "\"#\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7827,
+      "offset": 7951,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 7881,
+      "offset": 8005,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 8029,
+      "offset": 8153,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9899,
+      "offset": 10023,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 10660,
+      "offset": 10784,
       "length": 3,
       "value": "\"+\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 10766,
+      "offset": 10890,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 10993,
+      "offset": 11117,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 11267,
+      "offset": 11391,
       "length": 4,
       "value": "\"%@\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11472,
+      "offset": 11596,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11528,
+      "offset": 11652,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 11597,
+      "offset": 11721,
       "length": 2,
       "value": "32"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11654,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11724,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 11777,
-      "length": 3,
-      "value": "\"+\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 12656,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13596,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 13696,
-      "length": 3,
-      "value": "\"+\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 13735,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13838,
+      "offset": 11772,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 14015,
+      "offset": 11832,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11902,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11952,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 12008,
+      "length": 3,
+      "value": "\"+\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 12887,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13827,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 13927,
+      "length": 3,
+      "value": "\"+\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 13966,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14069,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14246,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 14528,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CallOutboundViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14764,
       "length": 4,
       "value": "true"
     },
@@ -46788,7 +46752,7 @@
       "kind": "StringLiteral",
       "offset": 6758,
       "length": 7,
-      "value": "\"0.6.1\""
+      "value": "\"0.7.0\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
@@ -48347,128 +48311,114 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2521,
+      "offset": 2475,
       "length": 5,
       "value": "\"%1%\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2571,
+      "offset": 2525,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2897,
+      "offset": 2851,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3337,
+      "offset": 3291,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3381,
+      "offset": 3335,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3444,
+      "offset": 3398,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3771,
+      "offset": 3725,
       "length": 3,
       "value": "\"#\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 3950,
+      "offset": 3904,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "Array",
-      "offset": 4479,
+      "offset": 4433,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4668,
+      "offset": 4882,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4989,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5081,
+      "offset": 5412,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5093,
+      "offset": 5424,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5107,
+      "offset": 5438,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5204,
+      "offset": 5535,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5216,
+      "offset": 5547,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 5529,
-      "length": 3,
-      "value": "0.5"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5620,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5709,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Model\/LocalizationInfoModel.swift",
@@ -54969,149 +54919,163 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2642,
+      "offset": 2740,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2687,
+      "offset": 2785,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2736,
+      "offset": 2834,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2784,
+      "offset": 2882,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3579,
+      "offset": 3677,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3744,
+      "offset": 3842,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4735,
+      "offset": 4833,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 5242,
+      "offset": 5340,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5325,
+      "offset": 5423,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5422,
+      "offset": 5520,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5463,
+      "offset": 5561,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5506,
+      "offset": 5604,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5543,
+      "offset": 5641,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7480,
+      "offset": 7578,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 7540,
+      "offset": 7638,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 8397,
+      "offset": 8495,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8710,
+      "offset": 8808,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8778,
+      "offset": 8876,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9057,
+      "offset": 9155,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 10581,
+      "offset": 10679,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
       "kind": "StringLiteral",
-      "offset": 11497,
+      "offset": 11595,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 12025,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/OtpOutboundViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12261,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Extension\/UIImage+VfkExtension.swift",
@@ -55305,44 +55269,65 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
       "kind": "BooleanLiteral",
-      "offset": 1076,
+      "offset": 1051,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
       "kind": "BooleanLiteral",
-      "offset": 1207,
+      "offset": 1114,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
       "kind": "BooleanLiteral",
-      "offset": 1269,
+      "offset": 1245,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
       "kind": "BooleanLiteral",
-      "offset": 1304,
+      "offset": 1307,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
       "kind": "BooleanLiteral",
-      "offset": 1369,
+      "offset": 1342,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1407,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1644,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1693,
+      "offset": 1721,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Protocol\/VerifyKitSingleton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2183,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
@@ -55410,168 +55395,147 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4090,
+      "offset": 4049,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4859,
+      "offset": 4818,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5147,
+      "offset": 5106,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5401,
+      "offset": 5360,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5849,
+      "offset": 5808,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5997,
+      "offset": 5956,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6157,
+      "offset": 6116,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6491,
+      "offset": 6450,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "StringLiteral",
-      "offset": 6746,
+      "offset": 6705,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7177,
+      "offset": 7136,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7303,
+      "offset": 7262,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7564,
+      "offset": 7523,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7931,
+      "offset": 7979,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 8244,
-      "length": 3,
-      "value": "0.5"
+      "kind": "BooleanLiteral",
+      "offset": 8075,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 8447,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 8487,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 8682,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 8731,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 8794,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9377,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8335,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8424,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8881,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8977,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 9349,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 9389,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 9584,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 9633,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 9696,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneMainViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10107,
+      "offset": 9548,
       "length": 1,
       "value": "1"
     },
@@ -59715,84 +59679,91 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2526,
+      "offset": 2786,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3660,
+      "offset": 2893,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3715,
+      "offset": 4037,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4092,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4481,
+      "offset": 4858,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4498,
+      "offset": 4875,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4632,
+      "offset": 5009,
       "length": 14,
       "value": "\"cancelButton\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4804,
+      "offset": 5181,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4820,
+      "offset": 5197,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4983,
+      "offset": 5360,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5000,
+      "offset": 5377,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5031,
+      "offset": 5408,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/CarrierListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5084,
+      "offset": 5461,
       "length": 2,
       "value": "\"\""
     },
@@ -65427,238 +65398,238 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1366,
+      "offset": 1393,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1922,
+      "offset": 1949,
       "length": 4,
       "value": "\"%@\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2325,
+      "offset": 2352,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2538,
+      "offset": 2565,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2670,
+      "offset": 2697,
       "length": 4,
       "value": "\"%@\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2849,
+      "offset": 2876,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 3266,
+      "offset": 3293,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3280,
+      "offset": 3307,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3329,
+      "offset": 3356,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3365,
+      "offset": 3392,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3538,
+      "offset": 3565,
       "length": 4,
       "value": "\"%@\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3668,
+      "offset": 3695,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3916,
+      "offset": 3943,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4109,
+      "offset": 4136,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4149,
+      "offset": 4176,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4186,
+      "offset": 4213,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4225,
+      "offset": 4252,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4412,
+      "offset": 4439,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4452,
+      "offset": 4479,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4489,
+      "offset": 4516,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4528,
+      "offset": 4555,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4625,
+      "offset": 4652,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4665,
+      "offset": 4692,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4702,
+      "offset": 4729,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4741,
+      "offset": 4768,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4870,
+      "offset": 4897,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4941,
+      "offset": 4968,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4996,
+      "offset": 5023,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5362,
+      "offset": 5389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5744,
-      "length": 1,
-      "value": "0"
+      "kind": "BooleanLiteral",
+      "offset": 5713,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5870,
+      "offset": 5751,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6092,
+      "offset": 5929,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6210,
+      "offset": 6047,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6353,
+      "offset": 6190,
       "length": 4,
       "value": "true"
     },
@@ -65672,175 +65643,210 @@
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 928,
+      "offset": 277,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 975,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1012,
+      "offset": 1059,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1080,
+      "offset": 1127,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1378,
+      "offset": 1425,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1522,
+      "offset": 1569,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1531,
+      "offset": 1578,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1815,
+      "offset": 1862,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2117,
+      "offset": 2164,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2424,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2433,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2661,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "Array",
-      "offset": 2682,
+      "offset": 3375,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2944,
+      "offset": 3637,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3013,
+      "offset": 3706,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
+      "kind": "Array",
+      "offset": 4518,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4765,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4834,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3191,
+      "offset": 5157,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3200,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3428,
+      "offset": 5251,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "Array",
-      "offset": 4241,
+      "offset": 5727,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4488,
+      "offset": 5982,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4557,
+      "offset": 6051,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4880,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4974,
+      "offset": 6229,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "StringLiteral",
-      "offset": 5198,
+      "offset": 6391,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5670,
+      "offset": 6901,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5679,
+      "offset": 7029,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6433,
+      "offset": 7556,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6675,
-      "length": 4,
-      "value": "true"
+      "kind": "IntegerLiteral",
+      "offset": 7728,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Controller-2\/SplashViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6968,
+      "offset": 8498,
       "length": 4,
       "value": "true"
     },

@@ -458,7 +458,7 @@ SWIFT_PROTOCOL("_TtP9VerifyKit27VerifyKitObjCViewController_")
 /// VerifyKit Settings
 SWIFT_CLASS("_TtC9VerifyKit16VerifyKitOptions")
 @interface VerifyKitOptions : NSObject
-- (nonnull instancetype)initWithEnvironment:(enum VerifyKitEnvironment)environment logActive:(BOOL)logActive deviceID:(NSString * _Nullable)deviceID OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithEnvironment:(enum VerifyKitEnvironment)environment logActive:(BOOL)logActive deviceID:(NSString * _Nullable)deviceID countryCode:(NSString * _Nullable)countryCode phoneCode:(NSString * _Nullable)phoneCode phoneNumber:(NSString * _Nullable)phoneNumber OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

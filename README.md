@@ -172,6 +172,9 @@ public struct VerifyKitOptions {
     var environment: VerifyKitEnvironment = .debug // default
     var logActive: Bool = true // default
     var deviceID: String? // optional
+    var countryCode: String? // optional ("US")
+    var phoneCode: String? // optional ("1") or ("+1")
+    var phoneNumber: String? // optional ("1234567890")
 }
 
 public enum VerifyKitEnvironment {
@@ -183,6 +186,8 @@ public enum VerifyKitEnvironment {
     case release
 }
 ```
+
+If the host application wants to let the user input their phone number and then pass it to the SDK, it can be done using the ```countryCode```, ```phoneCode``` and ```phoneNumber``` parameters.
 
 ## Dependencies
 

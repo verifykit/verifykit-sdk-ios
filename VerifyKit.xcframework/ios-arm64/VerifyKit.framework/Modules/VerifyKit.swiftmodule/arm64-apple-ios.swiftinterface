@@ -152,7 +152,7 @@ public struct BlockModeOption : Swift.OptionSet {
   public typealias RawValue = Swift.Int
 }
 @objc open class VerifyKitOptions : ObjectiveC.NSObject {
-  @objc public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = "")
+  @objc public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = "", countryCode: Swift.String? = "", phoneCode: Swift.String? = "", phoneNumber: Swift.String? = "")
   @objc deinit
 }
 @objc public protocol VerifyKitObjCDelegate {
@@ -202,9 +202,6 @@ public enum ReachabilityError : Swift.Error {
 public let ReachabilityChangedNotification: Foundation.NSNotification.Name
 extension Foundation.NSNotification.Name {
   public static let reachabilityChanged: Foundation.Notification.Name
-  public static let kBackToNavigate: Foundation.Notification.Name
-  public static let kBackToEditPhoneNumber: Foundation.Notification.Name
-  public static let kDismissEditPhoneNumber: Foundation.Notification.Name
   public static let kCloseSDK: Foundation.Notification.Name
 }
 public class Reachability {
