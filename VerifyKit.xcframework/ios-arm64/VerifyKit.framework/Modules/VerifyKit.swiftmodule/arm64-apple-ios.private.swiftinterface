@@ -112,6 +112,7 @@ public enum VerifyKitError : Swift.Error {
   case apiError(description: Swift.String)
   case urlSchemeError
   case cancelled
+  case invalidNumber
 }
 @objc public enum VerifyKitEnvironment : Swift.Int {
   case debug = 0

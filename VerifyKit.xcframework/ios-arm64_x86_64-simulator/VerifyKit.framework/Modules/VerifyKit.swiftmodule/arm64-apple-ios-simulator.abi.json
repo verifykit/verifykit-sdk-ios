@@ -555,6 +555,43 @@
             "usr": "s:9VerifyKit0aB5ErrorO9cancelledyA2CmF",
             "mangledName": "$s9VerifyKit0aB5ErrorO9cancelledyA2CmF",
             "moduleName": "VerifyKit"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidNumber",
+            "printedName": "invalidNumber",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VerifyKit.VerifyKitError.Type) -> VerifyKit.VerifyKitError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyKitError",
+                    "printedName": "VerifyKit.VerifyKitError",
+                    "usr": "s:9VerifyKit0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VerifyKit.VerifyKitError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyKitError",
+                        "printedName": "VerifyKit.VerifyKitError",
+                        "usr": "s:9VerifyKit0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9VerifyKit0aB5ErrorO13invalidNumberyA2CmF",
+            "mangledName": "$s9VerifyKit0aB5ErrorO13invalidNumberyA2CmF",
+            "moduleName": "VerifyKit"
           }
         ],
         "declKind": "Enum",
@@ -42176,7 +42213,7 @@
       "kind": "StringLiteral",
       "offset": 6758,
       "length": 7,
-      "value": "\"0.7.1\""
+      "value": "\"0.7.2\""
     },
     {
       "filePath": "\/Users\/alperkayabasi\/Documents\/Git\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
