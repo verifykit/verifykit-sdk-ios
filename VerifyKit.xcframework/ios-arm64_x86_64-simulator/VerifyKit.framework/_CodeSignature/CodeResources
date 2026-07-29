@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		G9Dmv5sAIMOawhhEU/lIP4owBm0=
+		o9gDqRaS3QX1mzWY61SIkv9hptc=
 		</data>
 		<key>CallOutboundViewController.nib</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		e8qdVtZEFpbRqdYWeRH9EAuqG7M=
+		5y63/WANMx6OAmMP0+/hZsxtRrA=
 		</data>
 		<key>KitTableViewCell.nib</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		JfxgtHNHDmRuHVP4I5AGhvPCsRA=
+		6zUAePoBeugg4DPWfsTUadf3Bhg=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -90,11 +90,11 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/gkUexHu79nWiccRJh36EsmWD90=
+		USh2t2EaSo31zKIF0E8I+6YOYKA=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		JfxgtHNHDmRuHVP4I5AGhvPCsRA=
+		6zUAePoBeugg4DPWfsTUadf3Bhg=
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WU+udbSY6qA0LXDeDVsffW7vIgU=
+		lnSL/Awr+kLko1tYzuk72MlcEak=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -185,7 +185,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yGp7kuawWpLtvoY1iqpu7ORc3PEkxyMXDklQZFZ+was=
+			z4089LlDGhzXvNZqjfyV1D1HGhrEZIyk9VHf/3v2CjI=
 			</data>
 		</dict>
 		<key>CallOutboundViewController.nib</key>
@@ -283,7 +283,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6TnLVU1Qdo2JKq+4Gz9CghVCB7VtxAxbItST0LSR8WQ=
+			IWhuTrDc9t75NeBMEAaHbqxmAGbY9tJt/7YzDTf0SQg=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -311,14 +311,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLFQtBimfjVbX8rBWGUm2nn68KYU2tprGOPYTEw5vps=
+			XE7CgOFiP9iXAapG/ay2yBLCExQ6QTDC4ImVgilf2uY=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6TnLVU1Qdo2JKq+4Gz9CghVCB7VtxAxbItST0LSR8WQ=
+			IWhuTrDc9t75NeBMEAaHbqxmAGbY9tJt/7YzDTf0SQg=
 			</data>
 		</dict>
 		<key>Modules/VerifyKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -346,7 +346,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8OsdRrEPILnBEzBrAw64ZxuapwJazwLQqU9NeTELEHI=
+			L3dTetjlFXXGvCAwfxDW1bgAHZp0qBOzsxvH19ndeUg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

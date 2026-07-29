@@ -45127,7 +45127,7 @@
       "kind": "StringLiteral",
       "offset": 7098,
       "length": 7,
-      "value": "\"0.7.4\""
+      "value": "\"0.7.5\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
