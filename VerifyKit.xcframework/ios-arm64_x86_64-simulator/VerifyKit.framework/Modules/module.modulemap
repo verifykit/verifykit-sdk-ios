@@ -7,5 +7,4 @@ framework module VerifyKit {
 
 module VerifyKit.Swift {
   header "VerifyKit-Swift.h"
-  requires objc
 }
