@@ -1817,6 +1817,110 @@
         "printedName": "VerifyKitOptions",
         "children": [
           {
+            "kind": "Var",
+            "name": "eventDelegate",
+            "printedName": "eventDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any VerifyKit.VerifyKitEventDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvp",
+            "mangledName": "$s9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvp",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any VerifyKit.VerifyKitEventDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyKitEventDelegate",
+                        "printedName": "any VerifyKit.VerifyKitEventDelegate",
+                        "usr": "s:9VerifyKit0aB13EventDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvg",
+                "mangledName": "$s9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvg",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any VerifyKit.VerifyKitEventDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerifyKitEventDelegate",
+                        "printedName": "any VerifyKit.VerifyKitEventDelegate",
+                        "usr": "s:9VerifyKit0aB13EventDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvs",
+                "mangledName": "$s9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvs",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvM",
+                "mangledName": "$s9VerifyKit0aB7OptionsC13eventDelegateAA0ab5EventE0_pSgvM",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(environment:logActive:deviceID:countryCode:phoneCode:phoneNumber:sessionToken:)",
@@ -1927,6 +2031,132 @@
               "ObjC"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(environment:logActive:deviceID:countryCode:phoneCode:phoneNumber:sessionToken:eventDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerifyKitOptions",
+                "printedName": "VerifyKit.VerifyKitOptions",
+                "usr": "c:@M@VerifyKit@objc(cs)VerifyKitOptions"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VerifyKitEnvironment",
+                "printedName": "VerifyKit.VerifyKitEnvironment",
+                "hasDefaultArg": true,
+                "usr": "c:@M@VerifyKit@E@VerifyKitEnvironment"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any VerifyKit.VerifyKitEventDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerifyKitEventDelegate",
+                    "printedName": "any VerifyKit.VerifyKitEventDelegate",
+                    "usr": "s:9VerifyKit0aB13EventDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9VerifyKit0aB7OptionsC11environment9logActive8deviceID11countryCode05phoneJ00K6Number12sessionToken13eventDelegateAcA0aB11EnvironmentO_SbSSSgA4nA0ab5EventP0_pSgtcfc",
+            "mangledName": "$s9VerifyKit0aB7OptionsC11environment9logActive8deviceID11countryCode05phoneJ00K6Number12sessionToken13eventDelegateAcA0aB11EnvironmentO_SbSSSgA4nA0ab5EventP0_pSgtcfc",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
           },
           {
             "kind": "Constructor",
@@ -2220,6 +2450,451 @@
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VerifyKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VerifyKitEvent",
+        "printedName": "VerifyKitEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VerifyKit0aB5EventV4nameSSvp",
+            "mangledName": "$s9VerifyKit0aB5EventV4nameSSvp",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB5EventV4nameSSvg",
+                "mangledName": "$s9VerifyKit0aB5EventV4nameSSvg",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "surface",
+            "printedName": "surface",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VerifyKit0aB5EventV7surfaceSSvp",
+            "mangledName": "$s9VerifyKit0aB5EventV7surfaceSSvp",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB5EventV7surfaceSSvg",
+                "mangledName": "$s9VerifyKit0aB5EventV7surfaceSSvg",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "action",
+            "printedName": "action",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VerifyKit0aB5EventV6actionSSvp",
+            "mangledName": "$s9VerifyKit0aB5EventV6actionSSvp",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB5EventV6actionSSvg",
+                "mangledName": "$s9VerifyKit0aB5EventV6actionSSvg",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VerifyKit0aB5EventV5stateSSSgvp",
+            "mangledName": "$s9VerifyKit0aB5EventV5stateSSSgvp",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB5EventV5stateSSSgvg",
+                "mangledName": "$s9VerifyKit0aB5EventV5stateSSSgvg",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "params",
+            "printedName": "params",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VerifyKit0aB5EventV6paramsSDySSypGvp",
+            "mangledName": "$s9VerifyKit0aB5EventV6paramsSDySSypGvp",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB5EventV6paramsSDySSypGvg",
+                "mangledName": "$s9VerifyKit0aB5EventV6paramsSDySSypGvg",
+                "moduleName": "VerifyKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allParams",
+            "printedName": "allParams",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9VerifyKit0aB5EventV9allParamsSDySSypGvp",
+            "mangledName": "$s9VerifyKit0aB5EventV9allParamsSDySSypGvp",
+            "moduleName": "VerifyKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9VerifyKit0aB5EventV9allParamsSDySSypGvg",
+                "mangledName": "$s9VerifyKit0aB5EventV9allParamsSDySSypGvg",
+                "moduleName": "VerifyKit",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9VerifyKit0aB5EventV",
+        "mangledName": "$s9VerifyKit0aB5EventV",
+        "moduleName": "VerifyKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VerifyKitEventDelegate",
+        "printedName": "VerifyKitEventDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "verifyKit",
+            "printedName": "verifyKit(didLogEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VerifyKitEvent",
+                "printedName": "VerifyKit.VerifyKitEvent",
+                "usr": "s:9VerifyKit0aB5EventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9VerifyKit0aB13EventDelegateP06verifyB006didLogC0yAA0abC0V_tF",
+            "mangledName": "$s9VerifyKit0aB13EventDelegateP06verifyB006didLogC0yAA0abC0V_tF",
+            "moduleName": "VerifyKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : VerifyKit.VerifyKitEventDelegate>",
+            "sugared_genericSig": "<Self where Self : VerifyKit.VerifyKitEventDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:9VerifyKit0aB13EventDelegateP",
+        "mangledName": "$s9VerifyKit0aB13EventDelegateP",
+        "moduleName": "VerifyKit",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VerifyKit",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -44201,37 +44876,296 @@
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
       "kind": "BooleanLiteral",
-      "offset": 1322,
+      "offset": 1618,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
       "kind": "StringLiteral",
-      "offset": 1370,
+      "offset": 1666,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
       "kind": "StringLiteral",
-      "offset": 1419,
+      "offset": 1715,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
       "kind": "StringLiteral",
-      "offset": 1466,
+      "offset": 1762,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
       "kind": "StringLiteral",
-      "offset": 1515,
+      "offset": 1811,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2488,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 2542,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 2597,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 2650,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Reference\/VerifyKitOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 2705,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1245,
+      "length": 8,
+      "value": "\"target\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1280,
+      "length": 10,
+      "value": "\"provider\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1321,
+      "length": 15,
+      "value": "\"provider_name\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1361,
+      "length": 8,
+      "value": "\"reason\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1393,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1423,
+      "length": 6,
+      "value": "\"step\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1455,
+      "length": 9,
+      "value": "\"channel\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1489,
+      "length": 8,
+      "value": "\"source\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1520,
+      "length": 6,
+      "value": "\"flow\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1552,
+      "length": 9,
+      "value": "\"country\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1589,
+      "length": 12,
+      "value": "\"carrier_id\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1628,
+      "length": 11,
+      "value": "\"kit_count\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1670,
+      "length": 15,
+      "value": "\"from_provider\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1714,
+      "length": 13,
+      "value": "\"to_provider\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1791,
+      "length": 10,
+      "value": "\"continue\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1824,
+      "length": 6,
+      "value": "\"back\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1854,
+      "length": 7,
+      "value": "\"close\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1884,
+      "length": 6,
+      "value": "\"send\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1916,
+      "length": 9,
+      "value": "\"sendSms\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1952,
+      "length": 10,
+      "value": "\"provider\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1988,
+      "length": 9,
+      "value": "\"country\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2023,
+      "length": 9,
+      "value": "\"carrier\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2064,
+      "length": 15,
+      "value": "\"countryPicker\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2111,
+      "length": 15,
+      "value": "\"privacyPolicy\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2152,
+      "length": 9,
+      "value": "\"problem\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2191,
+      "length": 13,
+      "value": "\"otherMethod\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2235,
+      "length": 14,
+      "value": "\"otherOptions\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2276,
+      "length": 10,
+      "value": "\"tryAgain\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2315,
+      "length": 12,
+      "value": "\"editNumber\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2357,
+      "length": 13,
+      "value": "\"errorDialog\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2871,
+      "length": 11,
+      "value": "\"verifykit\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Manager\/EventManager.swift",
+      "kind": "Dictionary",
+      "offset": 3416,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Frameworks\/CryptoSwift\/SHA2.swift",
@@ -45557,6 +46491,13 @@
       "value": "0.5"
     },
     {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Controller-2\/PhoneSecondViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1883,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Model\/LocalizationInfoModel.swift",
       "kind": "StringLiteral",
       "offset": 361,
@@ -45576,6 +46517,13 @@
       "offset": 685,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Controller-2\/Base\/BaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1187,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Frameworks\/CryptoSwift\/Poly1305.swift",
@@ -47561,7 +48509,7 @@
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Controller-2\/ActionSheetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1393,
+      "offset": 1632,
       "length": 1,
       "value": "5"
     },

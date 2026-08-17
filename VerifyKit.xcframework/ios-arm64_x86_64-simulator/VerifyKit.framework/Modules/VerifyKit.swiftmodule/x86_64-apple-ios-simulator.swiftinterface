@@ -155,7 +155,9 @@ public struct BlockModeOption : Swift.OptionSet {
   public typealias RawValue = Swift.Int
 }
 @objc open class VerifyKitOptions : ObjectiveC.NSObject {
+  weak public var eventDelegate: (any VerifyKit.VerifyKitEventDelegate)?
   @objc public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = "", countryCode: Swift.String? = "", phoneCode: Swift.String? = "", phoneNumber: Swift.String? = "", sessionToken: Swift.String? = nil)
+  convenience public init(environment: VerifyKit.VerifyKitEnvironment = .debug, logActive: Swift.Bool = true, deviceID: Swift.String? = "", countryCode: Swift.String? = "", phoneCode: Swift.String? = "", phoneNumber: Swift.String? = "", sessionToken: Swift.String? = nil, eventDelegate: (any VerifyKit.VerifyKitEventDelegate)?)
   @objc deinit
 }
 @objc public protocol VerifyKitObjCDelegate {
@@ -165,6 +167,19 @@ public struct BlockModeOption : Swift.OptionSet {
 public protocol VerifyKitDelegate {
   func didSuccess(with sessionCode: Swift.String)
   func didFail(with error: VerifyKit.VerifyKitError)
+}
+public struct VerifyKitEvent {
+  public let name: Swift.String
+  public let surface: Swift.String
+  public let action: Swift.String
+  public let state: Swift.String?
+  public let params: [Swift.String : Any]
+  public var allParams: [Swift.String : Any] {
+    get
+  }
+}
+public protocol VerifyKitEventDelegate : AnyObject {
+  func verifyKit(didLogEvent event: VerifyKit.VerifyKitEvent)
 }
 @objc public protocol VerifyKitObjCViewController {
   @objc weak var kitObjCDelegate: (any VerifyKit.VerifyKitObjCDelegate)? { get set }
