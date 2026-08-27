@@ -46061,7 +46061,7 @@
       "kind": "StringLiteral",
       "offset": 7098,
       "length": 7,
-      "value": "\"0.7.5\""
+      "value": "\"0.7.7\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
@@ -46136,16 +46136,16 @@
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7737,
-      "length": 17,
-      "value": "\"Graphik-Regular\""
+      "offset": 7735,
+      "length": 19,
+      "value": "\"Inter18pt-Regular\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7792,
-      "length": 18,
-      "value": "\"Graphik-Semibold\""
+      "offset": 7790,
+      "length": 20,
+      "value": "\"Inter18pt-SemiBold\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Utils\/SdkConstants.swift",
@@ -47740,22 +47740,22 @@
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Extension\/Font+VfkExtension.swift",
       "kind": "StringLiteral",
       "offset": 330,
-      "length": 20,
-      "value": "\"GraphikRegular.otf\""
+      "length": 24,
+      "value": "\"Inter_18pt-Regular.ttf\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Extension\/Font+VfkExtension.swift",
       "kind": "StringLiteral",
-      "offset": 393,
-      "length": 21,
-      "value": "\"GraphikSemibold.otf\""
+      "offset": 397,
+      "length": 25,
+      "value": "\"Inter_18pt-SemiBold.ttf\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Extension\/Font+VfkExtension.swift",
       "kind": "StringLiteral",
-      "offset": 457,
-      "length": 19,
-      "value": "\"GraphikMedium.otf\""
+      "offset": 465,
+      "length": 23,
+      "value": "\"Inter_18pt-Medium.ttf\""
     },
     {
       "filePath": "\/Users\/huseyin\/ai-collab-tmux\/projects\/verifykit-ios\/VerifyKit\/Frameworks\/CryptoSwift\/SHA1.swift",
